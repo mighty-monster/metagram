@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton_1"
+            android:layout_width="@dimen/ReportSelector_reportButtonSize"
+            android:layout_height="@dimen/ReportSelector_reportButtonSize"
+            android:layout_marginBottom="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton_2"
+            android:layout_width="@dimen/ReportSelector_reportButtonSize"
+            android:layout_height="@dimen/ReportSelector_reportButtonSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageButton_1"
+            app:layout_constraintTop_toTopOf="@+id/imageButton_1" />
+
+        <TextView
+            android:id="@+id/textView_1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ReportSelector_textViewHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/sBlack"
+            android:textSize="@dimen/ReportSelector_textSize"
+            app:layout_constraintEnd_toStartOf="@+id/textView_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton_1" />
+
+        <TextView
+            android:id="@+id/textView_2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ReportSelector_textViewHeight"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textColor="@color/sBlack"
+            android:textSize="@dimen/ReportSelector_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView_1"
+            app:layout_constraintTop_toTopOf="@+id/textView_1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_1">
+
+        <TextView
+            android:id="@+id/textView_3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ReportSelector_textViewHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/sBlack"
+            android:textSize="@dimen/ReportSelector_textSize"
+            app:layout_constraintEnd_toStartOf="@+id/textView_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton_3" />
+
+        <TextView
+            android:id="@+id/textView_4"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ReportSelector_textViewHeight"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textColor="@color/sBlack"
+            android:textSize="@dimen/ReportSelector_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView_3"
+            app:layout_constraintTop_toTopOf="@+id/textView_3" />
+
+        <ImageButton
+            android:id="@+id/imageButton_4"
+            android:layout_width="@dimen/ReportSelector_reportButtonSize"
+            android:layout_height="@dimen/ReportSelector_reportButtonSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageButton_3"
+            app:layout_constraintTop_toTopOf="@+id/imageButton_3" />
+
+        <ImageButton
+            android:id="@+id/imageButton_3"
+            android:layout_width="@dimen/ReportSelector_reportButtonSize"
+            android:layout_height="@dimen/ReportSelector_reportButtonSize"
+            android:layout_marginBottom="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_2">
+
+        <ImageButton
+            android:id="@+id/imageButton_5"
+            android:layout_width="@dimen/ReportSelector_reportButtonSize"
+            android:layout_height="@dimen/ReportSelector_reportButtonSize"
+            android:layout_marginBottom="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton_6"
+            android:layout_width="@dimen/ReportSelector_reportButtonSize"
+            android:layout_height="@dimen/ReportSelector_reportButtonSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageButton_5"
+            app:layout_constraintTop_toTopOf="@+id/imageButton_5" />
+
+        <TextView
+            android:id="@+id/textView_5"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/sBlack"
+            android:textSize="@dimen/ReportSelector_textSize"
+            app:layout_constraintEnd_toStartOf="@+id/textView_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton_5" />
+
+        <TextView
+            android:id="@+id/textView_6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ReportSelector_textViewHeight"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textColor="@color/sBlack"
+            android:textSize="@dimen/ReportSelector_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView_5"
+            app:layout_constraintTop_toTopOf="@+id/textView_5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

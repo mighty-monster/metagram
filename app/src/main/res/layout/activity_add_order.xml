@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:autofit="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/addOrder_rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sCoolGrayC3">
+
+    <LinearLayout
+            android:id="@+id/addOrder_searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:background="@color/sWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/addOrder_searchTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/sBlack"
+                android:gravity="center"
+                android:text="@string/addOrder_SearchAccount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+                android:id="@+id/addOrder_searchView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/sWhite"
+                android:layoutDirection="rtl"
+                android:voiceSearchMode="showVoiceSearchButton|launchRecognizer" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/addOrder_loading"
+                style="@style/SpinKitView.Wave"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="3dp"
+                android:visibility="invisible"
+                app:SpinKit_Color="@android:color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/addOrder_recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="visible">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addOrder_addLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/AccountBrowserProfile_ConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_report_fragment"
+                android:layoutDirection="ltr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/AccountBrowser_profileImage"
+                    android:layout_width="@dimen/profile_profilePicSize"
+                    android:layout_height="@dimen/profile_profilePicSize"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:elevation="2dp"
+                    android:padding="1dp"
+                    app:civ_border_color="@color/sBlack"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            <me.grantland.widget.AutofitTextView
+                    android:id="@+id/AccountBrowser_username_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_usernameTextViewHeight"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/profile_usernameTextSize"
+                    app:layout_constraintEnd_toEndOf="@+id/AccountBrowser_followingCountTitle"
+                    app:layout_constraintStart_toStartOf="@+id/AccountBrowser_profileImage"
+                    app:layout_constraintTop_toBottomOf="@+id/AccountBrowser_profileImage"
+                    autofit:minTextSize="10sp" />
+
+            <me.grantland.widget.AutofitTextView
+                    android:id="@+id/AccountBrowser_postCountNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintEnd_toEndOf="@+id/AccountBrowser_postCountTitle"
+                    app:layout_constraintStart_toStartOf="@+id/AccountBrowser_postCountTitle"
+                    app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_1"
+                    autofit:minTextSize="10sp" />
+
+            <me.grantland.widget.AutofitTextView
+                    android:id="@+id/AccountBrowser_followerCountNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintEnd_toEndOf="@+id/AccountBrowser_followerCountTitle"
+                    app:layout_constraintStart_toStartOf="@+id/AccountBrowser_followerCountTitle"
+                    app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_2"
+                    autofit:minTextSize="10sp" />
+
+            <me.grantland.widget.AutofitTextView
+                    android:id="@+id/AccountBrowser_followingCountNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintEnd_toEndOf="@+id/AccountBrowser_followingCountTitle"
+                    app:layout_constraintStart_toStartOf="@+id/AccountBrowser_followingCountTitle"
+                    app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_2"
+                    autofit:minTextSize="10sp" />
+
+
+            <TextView
+                    android:id="@+id/AccountBrowser_separator_1"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/profile_sepratorHeight"
+                    android:background="#000"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_2"
+                    app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_separator_2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/AccountBrowser_profileImage"
+                    app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_2" />
+
+            <TextView
+                    android:id="@+id/AccountBrowser_separator_2"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/profile_sepratorHeight"
+                    android:background="#000"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_profileImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/AccountBrowser_separator_1"
+                    app:layout_constraintTop_toTopOf="@+id/AccountBrowser_profileImage" />
+
+
+            <TextView
+                    android:id="@+id/AccountBrowser_postCountTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/profile_postsTitle"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_1"
+                    app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_separator_1"
+                    app:layout_constraintStart_toEndOf="@+id/AccountBrowser_profileImage" />
+
+            <TextView
+                    android:id="@+id/AccountBrowser_followerCountTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/profile_followersTitle"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_2"
+                    app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_separator_2"
+                    app:layout_constraintStart_toEndOf="@+id/AccountBrowser_separator_1" />
+
+            <TextView
+                    android:id="@+id/AccountBrowser_followingCountTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/profile_followingsTitle"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/AccountBrowser_separator_2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addOrderConfiguration_ConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_report_fragment"
+                app:layout_constraintBottom_toTopOf="@+id/addOrder_confirmButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AccountBrowserProfile_ConstraintLayout">
+
+
+            <ImageView
+                    android:id="@+id/addOrder_pParameterIcon"
+                    android:layout_width="@dimen/addOrder_iconSize"
+                    android:layout_height="@dimen/addOrder_iconSize"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/addOrder_dParameterIcon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addOrder_fParameterIcon"
+                    app:srcCompat="@drawable/ic_p_parameter" />
+
+            <CheckBox
+                    android:id="@+id/addOrder_pParameterCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/addOrder_pParameterTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/addOrder_pParameterIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/addOrder_pParameterIcon"
+                    app:layout_constraintTop_toTopOf="@+id/addOrder_pParameterIcon" />
+
+            <CheckBox
+                    android:id="@+id/addOrder_fParameterCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/addOrder_fParameterTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/addOrder_fParameterIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/addOrder_fParameterIcon"
+                    app:layout_constraintTop_toTopOf="@+id/addOrder_fParameterIcon" />
+
+            <ImageView
+                    android:id="@+id/addOrder_fParameterIcon"
+                    android:layout_width="@dimen/addOrder_iconSize"
+                    android:layout_height="@dimen/addOrder_iconSize"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/addOrder_pParameterIcon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_f_parameter" />
+
+            <ImageView
+                    android:id="@+id/addOrder_dParameterIcon"
+                    android:layout_width="@dimen/addOrder_iconSize"
+                    android:layout_height="@dimen/addOrder_iconSize"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/addOrder_rParameterIcon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addOrder_pParameterIcon"
+                    app:srcCompat="@drawable/ic_d_parameter" />
+
+            <ImageView
+                    android:id="@+id/addOrder_rParameterIcon"
+                    android:layout_width="@dimen/addOrder_iconSize"
+                    android:layout_height="@dimen/addOrder_iconSize"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/addOrder_intervalDays"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addOrder_dParameterIcon"
+                    app:srcCompat="@drawable/ic_r_parameter" />
+
+            <CheckBox
+                    android:id="@+id/addOrder_dParameterCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/addOrder_dParameterTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/addOrder_dParameterIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/addOrder_dParameterIcon"
+                    app:layout_constraintTop_toTopOf="@+id/addOrder_dParameterIcon" />
+
+            <CheckBox
+                    android:id="@+id/addOrder_rParameterCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/addOrder_rParameterTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/addOrder_rParameterIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/addOrder_rParameterIcon"
+                    app:layout_constraintTop_toTopOf="@+id/addOrder_rParameterIcon" />
+
+            <SeekBar
+                    android:id="@+id/addOrder_intervalSeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addOrder_intervalDays"
+                    app:layout_constraintEnd_toStartOf="@+id/addOrder_intervalDays"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addOrder_intervalDays"
+                    app:layout_constraintVertical_bias="0.562" />
+
+            <TextView
+                    android:id="@+id/addOrder_intervalDays"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintBottom_toTopOf="@+id/addOrder_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addOrder_rParameterIcon" />
+
+            <me.grantland.widget.AutofitTextView
+                    android:id="@+id/addOrder_time"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/sBlack"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addOrder_intervalDays"
+                    autofit:minTextSize="10dp" />
+
+            <LinearLayout
+                    android:id="@+id/addOrder_dummyLayout"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                        android:id="@+id/addOrder_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:scaleType="fitCenter"
+
+                        app:srcCompat="@drawable/ic_help" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+                android:id="@+id/addOrder_confirmButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_rectangle_button"
+                android:text="@string/button_confirmCaption"
+                android:textColor="@color/black"
+                android:textSize="@dimen/statisticsProgress_usernameTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/addOrder_priceLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/addOrder_addLayoutLoading"
+                style="@style/SpinKitView.Wave"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:SpinKit_Color="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addOrder_priceLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/lTransparent"
+                app:layout_constraintBottom_toBottomOf="@+id/addOrder_confirmButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/addOrder_confirmButton"
+                app:layout_constraintTop_toTopOf="@+id/addOrder_confirmButton">
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

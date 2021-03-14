@@ -83,3 +83,17 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# To be safe
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/.idea
+/gradle
+# To be safe

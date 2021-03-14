@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/PostLayout_Height"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/postType"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/postImage"
+        app:layout_constraintTop_toTopOf="@+id/postImage" />
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="@dimen/PostLayout_ImageWidth"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_image_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/captionTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="56dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textColor="@color/sBlack"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/postImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/postImage"
+        app:layout_constraintTop_toTopOf="@+id/postImage" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/sBlack"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shareButton"
+        app:layout_constraintStart_toEndOf="@+id/infoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/captionTextView"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/shareButton"
+        app:layout_constraintEnd_toEndOf="@+id/captionTextView"
+        app:srcCompat="@drawable/ic_download" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/captionTextView"
+        app:srcCompat="@drawable/ic_share_black" />
+
+    <ImageView
+        android:id="@+id/infoImageView"
+        android:layout_width="@dimen/PostLayout_InfoImageSize"
+        android:layout_height="@dimen/PostLayout_InfoImageSize"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/postImage"
+        app:layout_constraintStart_toStartOf="@+id/captionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/captionTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

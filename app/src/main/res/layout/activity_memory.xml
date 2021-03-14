@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/setting_rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/memory_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sCoolGrayC3"
+            android:text="@string/memoryActivity_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/sCoolGrayC3"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_report_fragment"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:layoutDirection="rtl"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/memory_mainDatabaseBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/memoryActivity_mainDatabaseBanner"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_title" />
+
+                <TextView
+                        android:id="@+id/memory_mainDatabaseTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_description" />
+
+                <Button
+                        android:id="@+id/memory_mainDatabaseShrink"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/shape_rectangle_button_gray"
+                        android:text="@string/memoryActivity_shrink"
+                        android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_report_fragment"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:layoutDirection="rtl"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/memory_logDatabaseBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/memoryActivity_logDatabaseBanner"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_title" />
+
+                <TextView
+                        android:id="@+id/memory_logDatabaseTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_description" />
+
+                <Button
+                        android:id="@+id/memory_logDatabaseShrink"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/shape_rectangle_button_gray"
+                        android:text="@string/memoryActivity_shrink"
+                        android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_report_fragment"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:layoutDirection="rtl"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/memory_downloadDirBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/memoryActivity_downloadDirBanner"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_title" />
+
+                <TextView
+                        android:id="@+id/memory_downloadDirTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_description" />
+
+                <Button
+                        android:id="@+id/memory_downloadDirClear"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/shape_rectangle_button_gray"
+                        android:text="@string/memoryActivity_clear"
+                        android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_report_fragment"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:layoutDirection="rtl"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/memory_cacheDirBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/memoryActivity_cacheDirBanner"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_title" />
+
+                <TextView
+                        android:id="@+id/memory_cacheDirTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_description" />
+
+                <Button
+                        android:id="@+id/memory_cacheDirClear"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/shape_rectangle_button_gray"
+                        android:text="@string/memoryActivity_clear"
+                        android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

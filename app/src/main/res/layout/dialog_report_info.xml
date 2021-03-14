@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_report_fragment"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <Button
+        android:id="@+id/reportInfo_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_profile_button"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reportInfo_Description" />
+
+    <ImageView
+        android:id="@+id/reportInfo_F_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/reportInfo_P_ImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reportInfo_P_ImageView"
+        app:srcCompat="@drawable/ic_f_parameter" />
+
+    <ImageView
+        android:id="@+id/reportInfo_P_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/reportInfo_D_ImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reportInfo_F_ImageView"
+        app:layout_constraintTop_toTopOf="@+id/reportInfo_D_ImageView"
+        app:srcCompat="@drawable/ic_p_parameter" />
+
+    <ImageView
+        android:id="@+id/reportInfo_D_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/reportInfo_R_ImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reportInfo_P_ImageView"
+        app:layout_constraintTop_toTopOf="@+id/reportInfo_R_ImageView"
+        app:srcCompat="@drawable/ic_d_parameter" />
+
+    <ImageView
+        android:id="@+id/reportInfo_R_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reportInfo_D_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/reportInfo_username"
+        app:srcCompat="@drawable/ic_r_parameter" />
+
+    <TextView
+        android:id="@+id/reportInfo_Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/reportInfo_Description"
+        android:textColor="@color/sBlack"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reportInfo_R_ImageView" />
+
+    <TextView
+        android:id="@+id/reportInfo_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="username"
+        android:textColor="@color/sBlack"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

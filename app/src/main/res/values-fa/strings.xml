@@ -1,0 +1,332 @@
+<resources>
+    <string name="app_name_en">Metagram</string>
+
+    <string name="account_fragment_titlePart1">به متاگرام خوش آمدید !</string>
+
+    <string name="account_fragment_addAccount">ورود به اینستاگرام</string>
+
+    <!--Login Activity-->
+    <string name="login_enterAccountPlease">لطفا به حساب اینستاگرام خود وارد شوید</string>
+    <string name="login_connectingToInsta">در حال اتصال به اینستاگرام</string>
+    <string name="login_problem">در صورت بروز مشکل اینجا کلیک کنید</string>
+    <string name="login_connectMessage">برقراری ارتباط</string>
+    <string name="login_successMessage">ورود موفق به اینستاگرام</string>
+    <string name="login_loadingMessage">در حال بارگذاری</string>
+
+
+    <!--Check Internet Dialog-->
+    <string name="error_cannotConnectToInstagram">خطا</string>
+    <string name="error_noInternetMessage">کاربر گرامی\nخواهشمند است از اتصال گوشی خود به اینترنت اطمینان حاصل نمایید</string>
+
+    <!--Button Titles-->
+    <string name="button_ok">باشه</string>
+    <string name="button_Yes">بلی</string>
+
+    <!--Metagram Agent-->
+    <string name="login_successful">ورود موفق به اینستاگرام :)</string>
+    <string name="login_duplicate">اطلاعات اکانت اینستاگرام بروز رسانی شد</string>
+
+    <!--General Menu-->
+    <string name="genMenu_settings">تنظیمات</string>
+    <string name="genMenu_help">راهنما</string>
+    <string name="genMenu_telegram">تلگرام ما</string>
+    <string name="genMenu_share">اشتراک</string>
+    <string name="genMenu_buy">خرید</string>
+    <string name="genMenu_downloadStory">دانلود هایلایت</string>
+
+    <!--Button Captions-->
+    <string name="button_confirmCaption">تایید</string>
+    <string name="button_cancelCaption">بی خیال</string>
+
+
+
+    <!--Account Viewer-->
+    <string name="accountViewer_getPosts_title">دریافت پست های کاربر</string>
+    <string name="accountViewer_getPosts_privateWarning">این حساب کاربری پرایویت است\nدرصورتی که جزء فالوئرهای آن نباشید، اطلاعات آن قابل دسترس نمی باشد</string>
+    <string name="accountViewer_charts_title">نمودارها</string>
+    <string name="accountViewer_reports_title">گزارش ها</string>
+    <string name="accountViewer_posts_title">پست ها</string>
+    <string name="accountViewer_addStatisticsMessage">سفارش آمار با موفقیت ثبت گردید</string>
+    <string name="accountViewer_purchaseStatistics">سفارش آمار</string>
+
+
+    <!--Edit Account-->
+    <string name="editAccount_message">کاربر گرامی،\nلطفا اطلاعات حساب کابری اکانتی را بروزرسانی کنید که از قبل در برنامه وارد کرده بودید، در غیر این صورت لطفا ابتدا از اکانت فعلی خارج شده و با اکانت جدید لاگین کنید</string>
+
+    <!--About US Activity-->
+    <string name="aboutUsActivity_title">درباره ی ما:</string>
+    <string name="aboutUsActivity_content">
+    هدف متاگرام رضایت شما، نوآوری و کیفیت بالای سرویس های ارائه شده است و تلاش بدون وقفه ی ما برای رضایت شما گواه این ادعا خواهد بود\n\n
+
+    در صورت نیاز به پشتیبانی لطفا با ای دی @metagram_support از طریق تلگرام تماس حاصل نمایید
+    </string>
+
+    <!--Setting Activity-->
+    <string name="settingActivity_title">تنظیمات نرم افزار</string>
+    <string name="settingActivity_notificationDescription">توضیحات:\nدر صورتی که اجرای به موقع گزارش گیری خودکار برای شما اهمیت دارد، این گزینه را فعال نگه دارید، هنگام فعال نبودن این گزینه سیستم عامل اندروید در زمانی که صحفه ی گوشی خاموش است برنامه را بسته و گزارش گیری خودکار، کارایی مورد نظر را نخواهد داشت</string>
+    <string name="settingActivity_delayTitle">سرعت جمع آوری اطلاعات</string>
+    <string name="settingActivity_delayDescription">توضیحات:\nبا کاهش این عدد گزارش گیری سریع تر می شود و با افزایش آن کندتر، مسلما ترجیح می دهید که سرعت دریافت اطلاعات حداکثر بوده و گزارش  گیری سریع تر تمام شود، مشکل اینجاست که با سرعت بخشیدن به جمع آوری اطلاعات ممکن است اینستاگرام محدودیت های موقت بر حساب کاربری اعمال کند، جهت اجتناب از این امر برنامه ی متاگرام پس از ارسال هر درخواست به اینستاگرام، مدت زمانی صبر کرده و سپس درخواست بعدی را ارسال می کند، عدد فوق مقدار زمان توقف برنامه قبل از ارسال درخواست جدید می باشد</string>
+    <string name="settingActivity_loggingTitle">لاگ برداری از خطاهای برنامه</string>
+    <string name="settingActivity_loggingDescription">توضیحات:\nهنگام فعال بودن این گزینه خطاهای رخ داده در نرم افزار در یک پایگاه داده مجزا دخیره شده و در صورت نیاز کاربر، با استفاده از گزینه ی ارسال خطا در منوی اصلی به سرور برنامه ارسال می گردند</string>
+    <string name="settingActivity_defaultSetting">تنظیمات پیش فرض</string>
+    <string name="settingActivity_wakeLockDescription">توضیحات:\nروشن بودن این گزینه باعث می شود برنامه در صورت نیاز مانع از خاموش شدن پردازنده و وای فای گوشی شده و هنگام خاموش بودن صفحه نمایش نیز گزارش گیری انجام شود\nتوجه: در بعضی نسخه های اندروید ممکن است برنامه قادر به روشن نگه داشتن وای فای گوشی نباشد</string>
+    <string name="settingActivity_sendErrors">ارسال خطا</string>
+
+    <!--Memory Activity-->
+    <string name="memoryActivity_shrink">فشرده سازی</string>
+    <string name="memoryActivity_clear">پاک سازی</string>
+    <string name="memoryActivity_title">تنظیمات حافظه</string>
+    <string name="memoryActivity_mainDatabaseBanner">پایگاه داده اصلی برنامه</string>
+    <string name="memoryActivity_mainDatabase">حجم پایگاه داده اصلی: %s</string>
+    <string name="memoryActivity_logDatabaseBanner">پایگاه داده لاگ برنامه</string>
+    <string name="memoryActivity_logDatabase">حجم پایگاه داده لاگ برداری: %s</string>
+    <string name="memoryActivity_downloadDirBanner">دایرکتوری دانلود</string>
+    <string name="memoryActivity_downloadDir">حجم فایل های دانلود شده: %s</string>
+    <string name="memoryActivity_cacheDirBanner">دایرکتوری کش</string>
+    <string name="memoryActivity_cacheDir">حجم دایرکتوری کش: %s</string>
+
+    <!--Finding Telegram-->
+    <string name="error_findingTelegramTitle">خطا</string>
+    <string name="error_findingTelegram">برنامه تلگرام یافت نشد، لطفا در صورت تمایل این نرم افزار را نصب کرده و مجددا سعی کنید</string>
+
+    <!--No Network-->
+    <string name="error_noNetworkTitle">خطای شبکه</string>
+    <string name="error_noNetwork">کاربر گرامی، گوشی شما به اینترنت متصل نیست، جهت استفاده از برنامه لطفا به اینترنت متصل شوید</string>
+
+    <!--Log In Errors-->
+    <string name="login_noNetwork">کاربر گرامی، گوشی شما به اینترنت متصل نیست و یا اینترنت شما بسیار کند است</string>
+    <string name="login_noServer">کاربر گرامی، مشکلی در سرور برنامه بوجود آمده، لطفا در صورت امکان مراتب را به پشتیبانی اطلاع داده و پس از چند ساعت مجدد تلاش نمایید</string>
+    <string name="login_unknownError">خطای ناشناخته، لطفا در صورت امکان مراتب را به پشتیبانی اطلاع دهید، با تشکر</string>
+
+    <!--Send Error Dialog-->
+    <string name="sendError_title">گزارش خطا</string>
+    <string name="sendError_deviceID">شناسه دستگاه:</string>
+    <string name="sendError_deviceID_notRegistered">ثبت نشده</string>
+    <string name="sendError_errorDescription">شرح خطا</string>
+    <string name="sendError_sendToServer">ارسال لاگ برنامه به سرور</string>
+    <string name="sendError_sendToTelegram">ارسال لاگ برنامه به تلگرام</string>
+    <string name="sendError_permissionErrorTitle">خطای دسترسی</string>
+    <string name="sendError_permissionErrorDescription">برنامه برای کپی پایگاه داده لاگ و ارسال آن، نیاز به دسترسی نوشتن بر روی حافظه داخلی گوشی دارد</string>
+
+
+    <!--Main Activity Menu-->
+    <string name="mainMenu_profile">پروفایل</string>
+    <string name="mainMenu_others">گزارش بقیه</string>
+    <string name="mainMenu_robots">ربات</string>
+    <string name="mainMenu_backButton">برای خروج، دکمه ی بازگشت را بار دیگر لمس کنید</string>
+    <string name="mainMenu_APIUpgradeMessage">کاربر گرامی،\n
+به دلیل تغییرات زیر ساختی در نحوه ی ارتباط برنامه با اینستاگرام لازم است مجدد در برنامه لاگ این نمایید\n
+با عرض پوزش و تشکر
+    </string>
+
+    <!--Profile Fragment-->
+    <string name="profile_followersTitle">فالوئر</string>
+    <string name="profile_followingsTitle">فالوئینگ</string>
+    <string name="profile_postsTitle">پست</string>
+    <string name="profile_noOfReports">حجم پایگاه داده:</string>
+    <string name="profile_noOfRequests">تعداد درخواست ارسالی به اینستاگرام:</string>
+    <string name="profile_noOfOthers">تعداد اکانت های ذخیره شده:</string>
+    <string name="profile_downloadTitle">دانلودها</string>
+    <string name="profile_downloadHighlight">هایلایت</string>
+    <string name="profile_downloadHistory">تاریخچه</string>
+    <string name="profile_rubiesTitle">یاقوت</string>
+    <string name="profile_settingReports">گزارش ها</string>
+    <string name="profile_settingMemory">حافظه</string>
+    <string name="profile_settingLogging">لاگ</string>
+    <string name="profile_helpVideo">تصویری</string>
+    <string name="profile_helpText">راهنما</string>
+    <string name="profile_aboutTitle">درباره متاگرام</string>
+    <string name="profile_aboutPrivacy">حریم شخصی</string>
+    <string name="profile_aboutLicense">حقوق و قوانین</string>
+    <string name="profile_aboutShare">اشتراک</string>
+    <string name="profile_aboutTelegram">تلگرام</string>
+    <string name="profile_aboutInstagram">اینستاگرام</string>
+    <string name="profile_aboutVersion">ورژن</string>
+
+    <!--Statistics Result Fragment-->
+    <string name="statisticsResult_Engagement">اینگیجمنت: %.1f ٪</string>
+
+    <!--Statistics Executor-->
+    <string name="statisticsExecutor_waitingInQeue">در انتظار اجرا</string>
+    <string name="statisticsExecutor_notEnoughRubies">یاقوت ناکافی</string>
+    <string name="statisticsExecutor_fetchingAccountInfo">دریافت اطلاعات کلی اکانت</string>
+    <string name="statisticsExecutor_collectingFollowers">جمع آوری لیست فالوئرها</string>
+    <string name="statisticsExecutor_collectingFollowings">جمع آوری لیست فالوئینگ ها</string>
+    <string name="statisticsExecutor_collectingPostsList">جمع آوری لیست پست ها</string>
+    <string name="statisticsExecutor_collectingPostsDetails">جمع آوری جزئیات پست ها</string>
+    <string name="statisticsExecutor_finalizing">جمع بندی</string>
+    <string name="statisticsExecutor_seconds">ثانیه</string>
+    <string name="statisticsExecutor_minutes">دقیقه</string>
+    <string name="statisticsExecutor_hours">ساعت</string>
+    <string name="statisticsExecutor_rateLimit">در انتظار اینستاگرام</string>
+
+    <!--Statistics Progress Fragment-->
+    <string name="statisticsProgress_Estimation">زمان تقریبی: </string>
+
+    <!--Add Order Fragment-->
+    <string name="addOrder_fParameterTitle">برررسی فالوئر ها / فالوئینگ ها</string>
+    <string name="addOrder_pParameterTitle">برررسی پست ها</string>
+    <string name="addOrder_dParameterTitle">برررسی لایک ها / کامنت ها</string>
+    <string name="addOrder_rParameterTitle">بروزرسانی خودکار</string>
+    <string name="addOrder_intervalDays"> هر %d روز</string>
+    <string name="addOrder_predictedTime">زمان تقریبی: %s</string>
+    <string name="addOrder_OrderPrice">هزینه ی گزارش: %d</string>
+    <string name="addOrder_SuccessMessage">گزارش با موفقیت ثبت شد :)</string>
+    <string name="addOrder_UpdateMessage">گزارش با موفقیت بروزرسانی شد :)</string>
+    <string name="addOrder_Warning">کاربر گرامی،\nتهیه ی گزارش با این تنظیمات روی گوشی پیشنهاد نمی شود، علاوه بر مصرف فضای ذخیره سازی زیاد از گوشی شما و زمان بسیار طولانی جمع آوری اطلاعات، ممکن است هنگام مشاهده ی گزارش برنامه زمان زیادی را صرف تهیه گزارش کند\nآیا می خواهد ادامه دهید ؟</string>
+    <string name="addOrder_WarningTitle">هشدار</string>
+    <string name="addOrder_WarningGoOn">ادامه بده</string>
+    <string name="addOrder_PrivateMessage">کاربر گرامی،\nاگر پیجی پروایت باشد برای تهیه ی گزارش لازم است آن پیج را فالو کرده باشید</string>
+    <string name="addOrder_UpgradeMessage">کاربر گرامی،\nیک گزارش با تنظیمات جدید به طور خودکار فعال خواهد شد\nآیا مطمئن هستید؟</string>
+    <string name="addOrder_UpgradeDialog">در حال پردازش</string>
+    <string name="addOrder_SearchAccount">جستجوی اکانت</string>
+    <string name="memoryActivity_clearingWarningTitle">پاک سازی</string>
+    <string name="memoryActivity_downloadDirWarning">تمام فایل های دانلود شده پاک خواهند شد\nآیا مطمئن هستید؟</string>
+    <string name="memoryActivity_cacheDirWarning">دایرکتوری کش پاک خواهد شد\nآیا مطمئن هستید؟</string>
+
+
+    <!--Statistics Remove Dialog-->
+    <string name="removeStatistics_title">حذف گزارش</string>
+    <string name="removeStatistics_content">کاربر گرامی\nگزارش های مربوط به حساب کاربری %s پاک خواهند شد\nآیا مطمئن هستید؟</string>
+
+    <!--Statistics Cancel Dialog-->
+    <string name="cancelStatistics_title">توقف گزارش</string>
+    <string name="cancelStatistics_content">کاربر گرامی\nگزارش مربوط به حساب کاربری %s لغو خواهد شد و یاغوت مصرف شده به حساب شما باز نخواهد شد\nآیا مطمئن هستید؟</string>
+
+
+    <!--Remove Account-->
+    <string name="removeAccount_title">حذف حساب کاربری</string>
+    <string name="removeAccount_content">کاربر گرامی\nحساب کاربری %s با تمامی اطلاعات مربوط به آن حذف خواهد شد\nآیا مطمئن هستید؟</string>
+
+    <!--Account Browser Activity-->
+    <string name="accntBrowser_followersTitle">فالوئر ها</string>
+    <string name="accntBrowser_followingsTitle">فالويینگ ها</string>
+    <string name="accntBrowser_postsTitle">پست ها</string>
+    <string name="accntBrowser_privateMessage">این حساب کاربری پرایوت است</string>
+    <string name="accntBrowser_downloadTitle">توجه</string>
+    <string name="accntBrowser_downloadMessage">این اکانت در حال حاضر استوری ندارد</string>
+    <string name="accntBrowser_startDownloading">دانلود شروع شد</string>
+    <string name="mediaViewer_error">با عرض پوزش، برنامه قادر به دریافت اطلاعات پست نیست، لطفا اینترنت گوشی و لینک ارسالی به برنامه را بررسی نمایید</string>
+    <string name="storyDownloader_storyTitle">استوری</string>
+    <string name="storyDownloader_downloadHighlightError">خطا در دانلود هایلایت، لطفا کمی بعد مجدد تلاش نمایید</string>
+    <string name="accntBrowser_refreshingInfo">به روز رسانی</string>
+
+
+    <!--Report Type Class-->
+    <string name="reportType_notFollowedBack">فالو بک نداده اید</string>
+    <string name="reportType_notFollowingBack">فالو بک نداده اند</string>
+    <string name="reportType_mostLikedPosts">پست های با بیشترین لایک</string>
+    <string name="reportType_mostCommentedPosts">پست های با بیشترین کامنت</string>
+    <string name="reportType_mostViewedPosts">پست های با بیشترین ویو</string>
+    <string name="reportType_peopleMostLiked">کسانی که بیشتر لایک کردند</string>
+    <string name="reportType_peopleMostCommented">کسانی که بیشتر کامنت گذاشته اند</string>
+    <string name="reportType_peopleMostEngaged">کسانی که بیشتر اینگیجمت داشته اند</string>
+    <string name="reportType_lazyFollowers">فالوئرهای بی مصرف</string>
+    <string name="reportType_likedButDidNotFollow">لایک کرده اند ولی فالو نکردند</string>
+    <string name="reportType_commentedButDidNotFollow">کامنت گذاشتند ولی فالو نکردند</string>
+    <string name="reportType_unfollowedYou">کسانی که آنفالو کردند</string>
+    <string name="reportType_removedLikes">لایک های پاک شده</string>
+    <string name="reportType_removedComments">کامنت های پاک شده</string>
+    <string name="reportType_someonesComments">کامنت های گذاشته شده</string>
+    <string name="reportType_someonesLikes">پست های لایک شده</string>
+    <string name="reportType_youunfollowed">کسانی که آنفالو کرده اید</string>
+
+    <!--Report Viewer Activity-->
+    <string name="reportViewer_validationMessage">اطلاعات این گزارش از تاریخ %s به بعد معتبر است</string>
+    <string name="reportViewer_getCount">تعداد</string>
+
+    <!--Query Steps Title-->
+    <string name="queryStep_p2p">نقطه ای</string>
+    <string name="queryStep_daily">روزانه</string>
+    <string name="queryStep_hourly">ساعتی</string>
+    <string name="queryStep_weekly">هفتگی</string>
+    <string name="queryStep_monthly">ماهانه</string>
+
+    <!--Charts Title-->
+    <string name="chartTitle_engagementInTime">تغییرات اینگیجمنت</string>
+    <string name="chartTitle_totalLikesInTime">تعداد کل لایک ها</string>
+    <string name="chartTitle_totalCommentsInTime">تعداد کل کامنت ها</string>
+    <string name="chartTitle_totalViewsInTime">تعداد کل ویو ها</string>
+    <string name="chartTitle_addedLikes">لایک های اضافه شده</string>
+    <string name="chartTitle_addedComments">کامنت های اضافه شده</string>
+    <string name="chartTitle_addedViews">ویو های اضافه شده</string>
+    <string name="chartTitle_changeOfFollowers">تعداد فالوئرها</string>
+    <string name="chartTitle_changeOfFollowings">تعداد فالوئینگ ها</string>
+
+    <!--Chart Types-->
+    <string name="chartType_barChart">نمودار میله ای</string>
+    <string name="chartType_lineChart">نمودار خطی</string>
+
+    <!--Share Post-->
+    <string name="sharePost_title">از طریق این لینک ها می توانید پست ها را دانلود کنید</string>
+
+    <!--Save Post-->
+    <string name="savePort_permissionTitle">دسترسی به حافظه</string>
+    <string name="savePort_permissionMessage">کاربر گرامی،\nبرنامه برای دخیره ی پست ها روی گوشی شما نیاز به دسترسی به حافظه دارد.\nلطفا پس از اعطای دسترسی، مجدد تلاش نمایید.</string>
+
+    <!--Share App-->
+    <string name="shareApp_title">متاگرام</string>
+    <string name="shareApp_content">لطفا برنامه ی متاگرام را از طریق لینک زیر امتحان کنید</string>
+    <string name="shareApp_choose">لطفا یکی از روش های ارسال را انتخاب کنید</string>
+
+    <!--Copy To Clipboard-->
+    <string name="copyToClipboard_telegramID">ای دی تلگرام در حافظه کپی شد</string>
+    <string name="copyToClipboard_caption">کپشن در حافظه کپی شد</string>
+    <string name="copyToClipboard_comment">کامنت در حافظه کپی شد</string>
+
+    <!--Disabled Chart-->
+    <string name="disabledChart_message">کاربر گرامی،\nنمودار ها زمانی فعال خواهند شد که این گزارش، حداقل ۲ بار به روز رسانی شده باشد، تا اطلاعات لازم جهت ساخت نمودارها جمع آوری گردد.\nدر صورت انتخاب گزینه «بررسی پست ها» هنگام سفارش گزارش، ۷ نوع نمودار و در غیر این صورت ۳ نوع نمودار موجود خواهد بود.</string>
+
+    <!--Disabled Report-->
+    <string name="disabledReport_message">کاربر گرامی،\nجهت استفاده از گزارش ها لازم است هنگام سفارش، حداقل یکی از گزینه های دریافت اطلاعات انتخاب شوند.\nشما می توانید از طریق دکمه ی تنظیمات هر گزارش تغییرات را اعمال نمایید</string>
+    <string name="disabledReport_button">جزئیات</string>
+    <!--Information Dialog-->
+    <string name="informationDialog_Title">اطلاعات</string>
+
+    <!--Report List Acitivity-->
+    <string name="reportList_Title">گزارش های مرتبط:</string>
+    <string name="reportList_R_Parameter_Description">این گزارش ها در صورتی معتبر بوده که گزارش گیری، حداقل ۲ بار به روزرسانی شود</string>
+
+    <!--Report Info-->
+    <string name="reportInfo_Description">این نوع گزارش گیری برنامه ی متاگرام، قابلیت تهیه ۱۴ نوع گزارش و ۷ نوع نمودار را دارد، هر یک از آنها متناسب با گزینه های جمع آوری اطلاعات انتخاب شده در سفارش گزارش گیری آماده می شوند، در نتیجه تعداد و نوع گزارش ها بستگی به انتخاب شما در سفارش گزارش گیری دارد</string>
+    <string name="reportInfo_Button_Setting">تنظیمات</string>
+    <string name="reportInfo_Button_Log">لاگ گزارش گیری</string>
+    <string name="reportInfo_noRuby">کاربر گرامی\nتعداد یاقوت های شما برای این گزارش کافی نیست\nمی توانید با خرید یاقوت بیشتر به گزارش گیری ادامه دهید</string>
+    <string name="reportInfo_notAutorized">کاربر گرامی\n
+برنامه دسترسی لازم برای دریافت اطلاعات را ندارد، دلیل آن می‌تواند یکی از موارد زیر باشد\n
+1. اکانت مورد نظر، شما را بلاک کرده است\n
+۲. در زمان سفارش گزارش اکانت پابلیک بوده، اما بعداً پراویت شده و شما آن را فالو نکرده‌اید\n
+۳. اکانت پرایوت بوده و در زمان سفارش آن را فالو داشته اید، اما بعداً آنفالو کرده‌اید\n
+در صورتی که هیچ یک از موارد فوق صحت ندارد، لطفاً با پشتیبانی تماس بگیرید</string>
+    <string name="reportInfo_rateLimit">اینستاگرام از ما می خواهد سرعت ارسال درخواست ها را کاهش دهیم، در نتیجه برای چند دقیقه صبر می کنیم و سپس ادامه می دهیم</string>
+
+
+    <!--Connection Info-->
+    <string name="connectionInfo_healthy">وضعیت: ارتباط بدون مشکل</string>
+    <string name="connectionInfo_noOfRequest">درخواست های ارسال شده: %,d</string>
+    <string name="connectionInfo_requestAverageTime">متوسط زمان ارسال درخواست: %.1f ثانیه</string>
+    <string name="connectionInfo_databaseSize">حجم پایگاه داده: %.1f MB</string>
+    <string name="connectionInfo_downloadedAccounts">اکانت های دانلود شده: %,d</string>
+    <string name="connectionInfo_noInternetContent">کاربر گرامی\nگوشی شما به اینترنت دسترسی ندارد و یا سرعت اینترنت بسیار پایین است</string>
+    <string name="connectionInfo_loginRequired">کاربر گرامی\nارتباط فعلی برنامه با اینستاگرام دیگر معتبر نبوده و برای ادامه، برنامه نیاز به login مجدد دارد</string>
+    <string name="connectionInfo_loginRequiredButton">Login</string>
+
+    <!--Download History-->
+    <string name="DownloadHistory_Title">تاریخچه دانلود</string>
+    <string name="DownloadItem_Title">تاریخ دانلود: %s،  تعداد فایل: %d</string>
+    <string name="DownloadItem_DeleteTitle">حذف فایل ها</string>
+    <string name="DownloadItem_DeleteAccount">تمامی فایل های دانلود شده برای این اکانت پاک خواهد شد، آیا مطمئن هستید ؟</string>
+    <string name="DownloadItem_DeletePost">تمامی فایل های دانلود شده برای این پست پاک خواهد شد، آیا مطمئن هستید ؟</string>
+
+    <!--Version Dialog-->
+    <string name="VersionDialog_UUID">شناسه دستگاه:\n %s</string>
+    <string name="VersionDialog_Version">نسخه: %s</string>
+    <string name="VersionDialog_Language">پشتیبانی از زبان های: %s</string>
+    <string name="VersionDialog_Clipboard">اطلاعات در حافظه کپی شد</string>
+
+    <!--Legal Activity-->
+    <string name="LegalActivity_Licences">لایسنس های متن باز</string>
+    <string name="LegalActivity_Terms">شرایط و مقررات سرویس‌دهی</string>
+    <string name="LegalActivity_Privacy">حریم شخصی</string>
+
+</resources>

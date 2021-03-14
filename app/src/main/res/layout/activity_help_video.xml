@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/helpActivity_rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_item_bg"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/sCoolGrayC3"
+            android:gravity="center"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:visibility="visible">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container_external"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp">
+
+            <TextView
+                    android:id="@+id/shimmer_text_exteral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="45sp" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container_internal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/shimmer_text_internal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/sCoolGrayC1"
+                        android:textSize="45sp" />
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <ImageView
+                android:id="@+id/navBar_imageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/helpVideo_RecyclerView"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+
+</LinearLayout>

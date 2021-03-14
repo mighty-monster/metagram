@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sWhite"
+    android:layoutDirection="ltr">
+
+
+    <LinearLayout
+        android:id="@+id/ReportSelector_titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sWhite"
+        android:gravity="center_vertical"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ReportSelector_backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/ReportSelector_titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/sBlack"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/ReportSelector_f_parameter_icon"
+            android:layout_width="@dimen/ReportSelector_iconSize"
+            android:layout_height="@dimen/ReportSelector_iconSize"
+            android:layout_marginStart="@dimen/ReportSelector_iconMargin"
+            android:layout_marginEnd="@dimen/ReportSelector_iconMargin"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_f_parameter" />
+
+        <ImageView
+            android:id="@+id/ReportSelector_p_parameter_icon"
+            android:layout_width="@dimen/ReportSelector_iconSize"
+            android:layout_height="@dimen/ReportSelector_iconSize"
+            android:layout_marginStart="@dimen/ReportSelector_iconMargin"
+            android:layout_marginEnd="@dimen/ReportSelector_iconMargin"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_p_parameter" />
+
+        <ImageView
+            android:id="@+id/ReportSelector_d_parameter_icon"
+            android:layout_width="@dimen/ReportSelector_iconSize"
+            android:layout_height="@dimen/ReportSelector_iconSize"
+            android:layout_marginStart="@dimen/ReportSelector_iconMargin"
+            android:layout_marginEnd="@dimen/ReportSelector_iconMargin"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_d_parameter" />
+
+        <ImageView
+            android:id="@+id/ReportSelector_r_parameter_icon"
+            android:layout_width="@dimen/ReportSelector_iconSize"
+            android:layout_height="@dimen/ReportSelector_iconSize"
+            android:layout_marginStart="@dimen/ReportSelector_iconMargin"
+            android:layout_marginEnd="@dimen/ReportSelector_iconMargin"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_r_parameter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ReportSelector_rankLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/sWhite"
+        android:gravity="center_vertical"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReportSelector_titleLayout">
+
+        <TextView
+            android:id="@+id/ReportSelector_rankTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/sBlack"
+            android:textSize="25dp" />
+
+        <RatingBar
+            android:id="@+id/ReportSelector_rankRateBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="1" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ReportSelector_viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ReportSelector_indicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReportSelector_rankLayout" />
+
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/ReportSelector_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:ci_drawable="@drawable/shape_indicator_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

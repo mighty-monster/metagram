@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+            android:angle="45"
+            android:centerColor="@color/sWhite"
+            android:endColor="@color/sWhite"
+            android:startColor="@color/sWhite" />
+    <corners android:radius="@dimen/dialog_server_background_cornerRadius" />
+    <padding
+            android:bottom="@dimen/dialog_server_background_padding"
+            android:left="@dimen/dialog_server_background_padding"
+            android:right="@dimen/dialog_server_background_padding"
+            android:top="@dimen/dialog_server_background_padding" />
+</shape>

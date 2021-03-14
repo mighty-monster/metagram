@@ -1,0 +1,158 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sCoolGrayC3"
+    app:cardPreventCornerOverlap="false">
+
+
+    <LinearLayout
+        android:id="@+id/statisticsResult_rootLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/lTransparent"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment">
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_stopOrder"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginStart="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_stop" />
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_pauseButton"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginStart="14dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_stopOrder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_pause" />
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_reportType"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_order_type_statistics" />
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_playButton"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginStart="14dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_pauseButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_play" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/statisticsProgress_pic"
+                android:layout_width="@dimen/statisticsResult_profilePicSize"
+                android:layout_height="@dimen/statisticsResult_profilePicSize"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp"
+                android:padding="1dp"
+                android:visibility="gone"
+                app:civ_border_color="@color/sBlack"
+                app:civ_border_width="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsProgress_pauseButton" />
+
+
+            <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                android:id="@+id/statisticsProgress_ProgressBar"
+                android:layout_width="@dimen/statisticsResult_profilePicSize"
+                android:layout_height="@dimen/statisticsResult_profilePicSize"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                app:direction="clockwise"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsProgress_pauseButton" />
+
+
+            <TextView
+                android:id="@+id/statisticsProgress_username"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/statisticsProgress_usernameTextViewHeight"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/sBlack"
+                android:gravity="left"
+                android:textSize="@dimen/statisticsProgress_usernameTextSize"
+                app:layout_constraintEnd_toStartOf="@+id/statisticsProgress_reportType"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_playButton"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsProgress_playButton" />
+
+            <me.grantland.widget.AutofitTextView
+                xmlns:autofit="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/statisticsProgress_approxTime"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/statisticsProgress_approxTextViewHeight"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/sBlack"
+                android:gravity="center"
+                android:textSize="@dimen/statisticsProgress_approxTextSize"
+                autofit:minTextSize="5dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@+id/statisticsProgress_reportType"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_playButton"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsProgress_username" />
+
+
+
+            <TextView
+                android:id="@+id/statisticsProgress_currentProcess"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/statisticsProgress_currentTextViewHeight"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/sBlack"
+                android:gravity="center"
+                android:textSize="@dimen/statisticsProgress_currentTextSize"
+                app:layout_constraintBottom_toBottomOf="@+id/statisticsProgress_reportType"
+                app:layout_constraintEnd_toStartOf="@+id/statisticsProgress_reportType"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_playButton"
+                app:layout_constraintTop_toTopOf="@+id/statisticsProgress_reportType" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

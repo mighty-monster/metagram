@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="@color/sCoolGrayC3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ReportList_F_Parameter_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/ReportList_F_Section_F_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_f_parameter" />
+
+            <TextView
+                android:id="@+id/ReportList_notFollowedBack_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_notFollowedBack"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_notFollowedBack_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_F_Section_F_Parameter_ImageView" />
+
+            <TextView
+                android:id="@+id/ReportList_notFollowingBack_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_notFollowingBack"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_notFollowingBack_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_notFollowedBack_TextView" />
+
+            <TextView
+                android:id="@+id/ReportList_F_Section_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/reportList_Title"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_F_Section_F_Parameter_ImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_F_Section_F_Parameter_ImageView" />
+
+            <ImageView
+                android:id="@+id/ReportList_notFollowedBack_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_notFollowedBack_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_notFollowedBack_TextView"
+                app:srcCompat="@drawable/ic_not_followed_back" />
+
+            <ImageView
+                android:id="@+id/ReportList_notFollowingBack_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_notFollowingBack_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_notFollowingBack_TextView"
+                app:srcCompat="@drawable/ic_not_following_back" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/P_Parameter_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/reportList_postsWithMostViews_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_postsWithMostViews_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_postsWithMostViews_TextView"
+                app:srcCompat="@drawable/ic_most_viewed_posts" />
+
+            <TextView
+                android:id="@+id/ReportList_postsWithMostViews_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_mostViewedPosts"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/reportList_postsWithMostViews_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_postsWithMostComments_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_postsWithMostComments_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_postsWithMostComments_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_postsWithMostComments_TextView"
+                app:srcCompat="@drawable/ic_most_commented_posts" />
+
+            <TextView
+                android:id="@+id/ReportList_postsWithMostComments_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_mostCommentedPosts"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_postsWithMostComments_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_postsWithMostLikes_TextView" />
+
+            <ImageView
+                android:id="@+id/reportList_postsWithMostLikes_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_postsWithMostLikes_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_postsWithMostLikes_TextView"
+                app:srcCompat="@drawable/ic_most_liked_posts" />
+
+            <TextView
+                android:id="@+id/ReportList_postsWithMostLikes_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_mostLikedPosts"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/reportList_postsWithMostLikes_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_P_Section_P_Parameter_ImageView" />
+
+            <TextView
+                android:id="@+id/ReportList_P_Section_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/reportList_Title"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_P_Section_P_Parameter_ImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_P_Section_P_Parameter_ImageView" />
+
+            <ImageButton
+                android:id="@+id/ReportList_P_Section_P_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_p_parameter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/P_D_Parameter_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ReportList_peopleEngagedMost_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_peopleEngagedMost_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_peopleEngagedMost_TextView"
+                app:srcCompat="@drawable/ic_people_most_engaged" />
+
+            <TextView
+                android:id="@+id/ReportList_peopleEngagedMost_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_peopleMostEngaged"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_peopleEngagedMost_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_peopleLikedMost_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_peopleCommentedMost_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_peopleCommentedMost_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_peopleCommentedMost_TextView"
+                app:srcCompat="@drawable/ic_people_most_commented" />
+
+            <TextView
+                android:id="@+id/ReportList_peopleCommentedMost_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_peopleMostCommented"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_peopleCommentedMost_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_peopleEngagedMost_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_peopleLikedMost_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_peopleLikedMost_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_peopleLikedMost_TextView"
+                app:srcCompat="@drawable/ic_people_most_liked" />
+
+            <TextView
+                android:id="@+id/ReportList_peopleLikedMost_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_peopleMostLiked"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_peopleLikedMost_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_PD_Section_P_Parameter_ImageView" />
+
+            <TextView
+                android:id="@+id/ReportList_PD_Section_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/reportList_Title"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_PD_Section_P_Parameter_ImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_PD_Section_P_Parameter_ImageView" />
+
+            <ImageButton
+                android:id="@+id/ReportList_PD_Section_D_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_PD_Section_P_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_PD_Section_Add_1"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_PD_Section_P_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_d_parameter" />
+
+            <ImageButton
+                android:id="@+id/ReportList_PD_Section_P_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_p_parameter" />
+
+            <ImageView
+                android:id="@+id/ReportList_PD_Section_Add_1"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_PD_Section_P_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_PD_Section_P_Parameter_ImageView"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_PD_Section_P_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_add" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/F_P_D_Parameter_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/ReportList_commentedButDidNotFollow_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_commentedButDidNotFollow_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_commentedButDidNotFollow_TextView"
+                app:srcCompat="@drawable/ic_commented_but_did_not_follow" />
+
+            <TextView
+                android:id="@+id/ReportList_commentedButDidNotFollow_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_commentedButDidNotFollow"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_commentedButDidNotFollow_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_likedButDidNotFollow_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_likedButDidNotFollow_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_likedButDidNotFollow_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_likedButDidNotFollow_TextView"
+                app:srcCompat="@drawable/ic_liked_but_did_not_follow" />
+
+            <TextView
+                android:id="@+id/ReportList_likedButDidNotFollow_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_likedButDidNotFollow"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_likedButDidNotFollow_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_lazyFollowers_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_lazyFollowers_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_lazyFollowers_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_lazyFollowers_TextView"
+                app:srcCompat="@drawable/ic_lazy_followers" />
+
+            <TextView
+                android:id="@+id/ReportList_lazyFollowers_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_lazyFollowers"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_lazyFollowers_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView" />
+
+            <TextView
+                android:id="@+id/ReportList_FPD_Section_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/reportList_Title"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView" />
+
+            <ImageButton
+                android:id="@+id/ReportList_FPD_Section_F_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FPD_Section_D_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_FPD_Section_Add_2"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FPD_Section_D_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_f_parameter" />
+
+            <ImageView
+                android:id="@+id/ReportList_FPD_Section_Add_2"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FPD_Section_D_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_FPD_Section_D_Parameter_ImageView"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FPD_Section_D_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/ReportList_FPD_Section_D_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_FPD_Section_Add_1"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_d_parameter" />
+
+            <ImageView
+                android:id="@+id/ReportList_FPD_Section_Add_1"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FPD_Section_P_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/ReportList_FPD_Section_P_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_p_parameter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/F_R_Parameter_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/ReportList_FR_Section_Description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportList_R_Parameter_Description"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_peopleYouUnfollowed_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_peopleUnfollowedYou_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_peopleUnfollowedYou_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_peopleUnfollowedYou_TextView"
+                app:srcCompat="@drawable/ic_unfollowed_you" />
+
+            <TextView
+                android:id="@+id/ReportList_peopleUnfollowedYou_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_unfollowedYou"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_peopleUnfollowedYou_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_FR_Section_F_Parameter_ImageView" />
+
+            <ImageView
+                android:id="@+id/ReportList_peopleYouUnfollowed_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_peopleYouUnfollowed_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_peopleYouUnfollowed_TextView"
+                app:srcCompat="@drawable/ic_you_unfollowed" />
+
+            <TextView
+                android:id="@+id/ReportList_peopleYouUnfollowed_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_youunfollowed"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_peopleUnfollowedYou_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_peopleUnfollowedYou_TextView" />
+
+            <TextView
+                android:id="@+id/ReportList_FR_Section_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/reportList_Title"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FR_Section_F_Parameter_ImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FR_Section_F_Parameter_ImageView" />
+
+            <ImageButton
+                android:id="@+id/ReportList_FR_Section_R_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FR_Section_F_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_FR_Section_Add_1"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FR_Section_F_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_r_parameter" />
+
+            <ImageView
+                android:id="@+id/ReportList_FR_Section_Add_1"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_FR_Section_F_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_FR_Section_F_Parameter_ImageView"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_FR_Section_F_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/ReportList_FR_Section_F_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_f_parameter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/P_D_R_Parameter_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment">
+
+            <TextView
+                android:id="@+id/ReportList_RPD_Section_Description2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportList_R_Parameter_Description"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_removedComments_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_removedComments_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_removedComments_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_removedComments_TextView"
+                app:srcCompat="@drawable/ic_removed_comments" />
+
+            <TextView
+                android:id="@+id/ReportList_removedComments_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_removedComments"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_removedComments_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_removedLikes_TextView" />
+
+            <ImageView
+                android:id="@+id/ReportList_removedLikes_ImageView"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_removedLikes_TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_removedLikes_TextView"
+                app:srcCompat="@drawable/ic_removed_likes" />
+
+            <TextView
+                android:id="@+id/ReportList_removedLikes_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reportType_removedLikes"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ReportList_removedLikes_ImageView"
+                app:layout_constraintTop_toBottomOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView" />
+
+            <TextView
+                android:id="@+id/ReportList_RPD_Section_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/reportList_Title"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/ReportList_ReportsTextTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView" />
+
+            <ImageButton
+                android:id="@+id/ReportList_RPD_Section_R_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_RPD_Section_D_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_RPD_Section_Add_2"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_RPD_Section_D_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_r_parameter" />
+
+            <ImageView
+                android:id="@+id/ReportList_RPD_Section_Add_2"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_RPD_Section_D_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_RPD_Section_D_Parameter_ImageView"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_RPD_Section_D_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/ReportList_RPD_Section_D_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_RPD_Section_Add_1"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_d_parameter" />
+
+            <ImageView
+                android:id="@+id/ReportList_RPD_Section_Add_1"
+                android:layout_width="@dimen/ReportList_ReportIconSize"
+                android:layout_height="@dimen/ReportList_ReportIconSize"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView"
+                app:layout_constraintTop_toTopOf="@+id/ReportList_RPD_Section_P_Parameter_ImageView"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/ReportList_RPD_Section_P_Parameter_ImageView"
+                android:layout_width="@dimen/ReportList_OptionIconSize"
+                android:layout_height="@dimen/ReportList_OptionIconSize"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_p_parameter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

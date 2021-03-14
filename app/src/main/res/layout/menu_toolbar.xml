@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/sCoolGrayC3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+    <ImageButton
+            android:id="@+id/mainActivity_menuButton"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_menu_black" />
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/mainActivity_externalShimmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-35dp"
+            android:layout_marginBottom="2dp">
+
+        <TextView
+                android:id="@+id/mainActivity_externalShimmerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@android:color/black"
+                android:textSize="28dp" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/mainActivity_internalShimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/mainActivity_internalShimmerTextView"
+                    android:layout_width="103dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/sCoolGrayC1"
+                    android:textSize="28dp" />
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal">
+<!--
+
+        <TextView
+                android:id="@+id/mainActivity_rubyCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="\?\?\?\?"
+                android:textColor="@color/sBlack"
+                android:textSize="15dp" />
+        <ImageButton
+                android:id="@+id/mainActivity_rubyButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_ruby" />
+
+-->
+        <ImageButton
+                android:id="@+id/mainActivity_statusButton"
+                android:layout_width="@dimen/profile_imageButtonSize"
+                android:layout_height="@dimen/profile_imageButtonSize"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/profile_editAccount"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_tick" />
+
+        <ImageButton
+                android:id="@+id/mainActivity_editAccount"
+                android:layout_width="@dimen/profile_imageButtonSize"
+                android:layout_height="@dimen/profile_imageButtonSize"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/profile_deleteAccount"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_re_login" />
+
+
+        <ImageButton
+                android:id="@+id/mainActivity_deleteAccount"
+                android:layout_width="@dimen/profile_imageButtonSize"
+                android:layout_height="@dimen/profile_imageButtonSize"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_logout" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

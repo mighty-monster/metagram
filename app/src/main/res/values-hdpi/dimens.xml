@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--General Menu-->
+    <dimen name="generalMenu_itemIconSize">15dp</dimen>
+    <dimen name="generalMenu_itemIconMargin">3dp</dimen>
+    <dimen name="generalMenu_itemTextSize">8dp</dimen>
+
+
+    <!--Statistics Chart/Report Viewer-->
+    <dimen name="statisticsViewer_titleTextSize">14dp</dimen>
+
+    <!--Add Statistics Dialog-->
+    <dimen name="addStatisticsDialog_textSize">12dp</dimen>
+
+
+    <!--Statistics Fragments-->
+    <dimen name="statisticsResult_imageButtonSize">20dp</dimen>
+    <dimen name="statisticsResult_profilePicSize">60dp</dimen>
+    <dimen name="statisticsResult_reportButtonsHeight">30dp</dimen>
+    <dimen name="statisticsResult_engagementTextViewHeight">30dp</dimen>
+    <dimen name="statisticsResult_datetimeTextViewHeight">18dp</dimen>
+    <dimen name="statisticsResult_datetimeTextSize">10dp</dimen>
+    <dimen name="statisticsResult_EngagementTextSize">8dp</dimen>
+    <dimen name="statisticsResult_rankTextSize">17dp</dimen>
+    <dimen name="statisticsProgress_usernameTextViewHeight">25dp</dimen>
+    <dimen name="statisticsProgress_usernameTextSize">16dp</dimen>
+    <dimen name="statisticsProgress_approxTextViewHeight">25dp</dimen>
+    <dimen name="statisticsProgress_approxTextSize">10dp</dimen>
+    <dimen name="statisticsProgress_currentTextViewHeight">20dp</dimen>
+    <dimen name="statisticsProgress_currentTextSize">10dp</dimen>
+
+    <!--Profile Fragment-->
+    <dimen name="profile_imageButtonSize">20dp</dimen>
+    <dimen name="profile_profilePicSize">60dp</dimen>
+    <dimen name="profile_usernameTextViewHeight">20dp</dimen>
+    <dimen name="profile_usernameTextSize">14dp</dimen>
+    <dimen name="profile_fullnameTextSize">12dp</dimen>
+    <dimen name="profile_sepratorHeight">50dp</dimen>
+    <dimen name="profile_reportFragmentHeight">150dp</dimen>
+    <dimen name="profile_extraInfoTextSize">11dp</dimen>
+    <dimen name="profile_settingHeight">120dp</dimen>
+    <dimen name="profile_settingSepratorHeight">30dp</dimen>
+
+    <!--Add Order Fragment-->
+    <dimen name="addOrder_iconSize">30dp</dimen>
+
+    <!--Report Selector Activity-->
+    <dimen name="ReportSelector_iconSize">20dp</dimen>
+    <dimen name="ReportSelector_iconMargin">3dp</dimen>
+    <dimen name="ReportSelector_reportButtonSize">70dp</dimen>
+    <dimen name="ReportSelector_textViewHeight">22dp</dimen>
+    <dimen name="ReportSelector_textSize">7dp</dimen>
+
+    <!--Post Account Layout-->
+    <dimen name="PostAccountLayout_Height">100dp</dimen>
+    <dimen name="PostAccountLayout_UsernameSize">9dp</dimen>
+    <dimen name="PostAccountLayout_CommentSize">7dp</dimen>
+    <dimen name="PostAccountLayout_ProfileSize">60dp</dimen>
+    <dimen name="PostAccountLayout_PostSize">80dp</dimen>
+
+    <!--Report Fragment-->
+    <dimen name="ReportFragment_FilterSize">25dp</dimen>
+
+    <!--Account Layout-->
+    <dimen name="AccountLayout_ImageSize">50dp</dimen>
+    <dimen name="AccountLayout_TextViewHeight">24dp</dimen>
+    <dimen name="AccountLayout_IconSize">30dp</dimen>
+
+    <!--Account Report-->
+    <dimen name="AccountReportLayout_ImageSize">70dp</dimen>
+    <dimen name="AccountReportLayout_textSize">18dp</dimen>
+    <dimen name="AccountReportLayout_IconSize">25dp</dimen>
+
+    <!--Post Layout-->
+    <dimen name="PostLayout_Height">120dp</dimen>
+    <dimen name="PostLayout_ImageWidth">90dp</dimen>
+    <dimen name="PostLayout_InfoImageSize">20dp</dimen>
+
+    <!--Send Error Dialog-->
+    <dimen name="SendError_TitleHeight">25dp</dimen>
+    <dimen name="SendError_DescriptionHeight">90dp</dimen>
+    <dimen name="SendError_TitleTextSize">12dp</dimen>
+    <dimen name="SendError_deviceIDTextSize">12dp</dimen>
+    <dimen name="SendError_DescriptionTextSize">13dp</dimen>
+    <dimen name="SendError_ButtonTextSize">15dp</dimen>
+
+</resources>

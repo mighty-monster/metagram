@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/serverDialogLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_connecting_dialog"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.3"
+        android:layout_margin="@dimen/dialog_server_SpinKitView_Margin"
+        app:SpinKit_Color="@android:color/black" />
+
+    <TextView
+        android:id="@+id/serverConnectionLabel_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dialog_server_Connecting_Margin"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/dialog_server_Connecting_TextSize" />
+
+
+</LinearLayout>

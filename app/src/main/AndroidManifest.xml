@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vp.metagram">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name="vp.metagram.base.MetagramApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_en"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MetagramNewTheme"
+        tools:replace="android:label,allowBackup"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="vp.metagram.ui.MainActivity"
+            android:label="@string/app_name_en"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MetagramNewTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="vp.metagram.ui.LogInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.MainMenu.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.MainMenu.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.ReportUI.AddOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.AccntBrowserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.AccntListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.AccntLikesListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.WebViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.MediaViewer.MediaViewerActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.DownloadStory.DownloadStoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.ReportUI.reportViewer.ReportSelectorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.ReportUI.reportViewer.ReportViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.ReportUI.chartViewer.ChartViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.Other.DebugActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.CommentViewer.CommentViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.Other.LogViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.Other.ReportListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vp.metagram.ui.AccBrowser.DownloadStory.DownloadSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+                android:name="vp.metagram.ui.AccBrowser.DownloadHistory.DownloadAccountListActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="vp.metagram.ui.AccBrowser.DownloadHistory.DownloadViewerActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="vp.metagram.ui.MainMenu.MemoryActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="vp.metagram.ui.MainMenu.LegalActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="vp.metagram.ui.MainMenu.HelpVideoActivity"
+                android:screenOrientation="portrait" />
+        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+                android:theme="@style/LicenceTheme" />
+        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
+                android:theme="@style/LicenceTheme" />
+        <service android:name="vp.metagram.utils.instagram.executors.statistics.StatisticsService"/>
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="nava.metagram"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_provider"/>
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AccountBrowser_rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sCoolGrayC3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AccountBrowserProfile_ConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_report_fragment"
+        android:layoutDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/AccountBrowser_profileImage"
+            android:layout_width="@dimen/profile_profilePicSize"
+            android:layout_height="@dimen/profile_profilePicSize"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:elevation="2dp"
+            android:padding="1dp"
+            app:civ_border_color="@color/sBlack"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/AccountBrowser_username_textView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/profile_usernameTextViewHeight"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="start"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/profile_usernameTextSize"
+            app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_save_story_imageButton"
+            app:layout_constraintStart_toStartOf="@+id/AccountBrowser_profileImage"
+            app:layout_constraintTop_toBottomOf="@+id/AccountBrowser_profileImage"
+            autofit:minTextSize="10sp" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/AccountBrowser_postCountNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="start"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="?"
+            android:textAlignment="center"
+            android:textColor="@color/sBlack"
+            app:layout_constraintEnd_toEndOf="@+id/AccountBrowser_postCountTitle"
+            app:layout_constraintStart_toStartOf="@+id/AccountBrowser_postCountTitle"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_1"
+            autofit:minTextSize="10sp" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/AccountBrowser_followerCountNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="start"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="?"
+            android:textAlignment="center"
+            android:textColor="@color/sBlack"
+            app:layout_constraintEnd_toEndOf="@+id/AccountBrowser_followerCountTitle"
+            app:layout_constraintStart_toStartOf="@+id/AccountBrowser_followerCountTitle"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_2"
+            autofit:minTextSize="10sp" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/AccountBrowser_followingCountNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="start"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="?"
+            android:textAlignment="center"
+            android:textColor="@color/sBlack"
+            app:layout_constraintEnd_toEndOf="@+id/AccountBrowser_followingCountTitle"
+            app:layout_constraintStart_toStartOf="@+id/AccountBrowser_followingCountTitle"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_2"
+            autofit:minTextSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/AccountBrowser_separator_1"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/profile_sepratorHeight"
+            android:background="#000"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_2"
+            app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_separator_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/AccountBrowser_profileImage"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_separator_2" />
+
+        <TextView
+            android:id="@+id/AccountBrowser_separator_2"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/profile_sepratorHeight"
+            android:background="#000"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_profileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/AccountBrowser_separator_1"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_profileImage" />
+
+
+        <TextView
+            android:id="@+id/AccountBrowser_postCountTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/profile_postsTitle"
+            android:textColor="@color/sBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_1"
+            app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_separator_1"
+            app:layout_constraintStart_toEndOf="@+id/AccountBrowser_profileImage" />
+
+        <TextView
+            android:id="@+id/AccountBrowser_followerCountTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/profile_followersTitle"
+            android:textColor="@color/sBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_2"
+            app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_separator_2"
+            app:layout_constraintStart_toEndOf="@+id/AccountBrowser_separator_1" />
+
+        <TextView
+            android:id="@+id/AccountBrowser_followingCountTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/profile_followingsTitle"
+            android:textColor="@color/sBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_separator_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/AccountBrowser_separator_2" />
+
+        <ImageButton
+            android:id="@+id/AccountBrowser_save_story_imageButton"
+            android:layout_width="@dimen/AccountBrowser_iconSize"
+            android:layout_height="@dimen/AccountBrowser_iconSize"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_username_textView"
+            app:layout_constraintEnd_toStartOf="@+id/AccountBrowser_order_report_imageButton"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_username_textView"
+            app:srcCompat="@drawable/ic_story" />
+
+        <ImageButton
+            android:id="@+id/AccountBrowser_order_report_imageButton"
+            android:layout_width="@dimen/AccountBrowser_iconSize"
+            android:layout_height="@dimen/AccountBrowser_iconSize"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@+id/AccountBrowser_save_story_imageButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_save_story_imageButton"
+            app:srcCompat="@drawable/ic_order_report" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_report_fragment"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccountBrowserProfile_ConstraintLayout">
+
+        <TextView
+            android:id="@+id/AccountBrowser_postsLayout_privateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/accntBrowser_privateMessage"
+            android:textColor="@color/sBlack"
+            android:textSize="24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AccountBrowser_postsLayout_privateIcon" />
+
+        <ImageView
+            android:id="@+id/AccountBrowser_postsLayout_privateIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_private_icon" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/AccountBrowser_loadingView"
+            style="@style/SpinKitView.Wave"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            app:SpinKit_Color="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/AccountBrowser_postsLayout_RecycleView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/AccountBrowser_loadingView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

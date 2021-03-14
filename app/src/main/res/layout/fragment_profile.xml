@@ -1,0 +1,247 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sCoolGrayC3"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:id="@+id/reportLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_reportFragmentHeight"
+                android:orientation="vertical">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/profile_spinKit"
+                    style="@style/SpinKitView.Large.Wave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dialog_server_SpinKitView_Margin"
+                    android:layout_weight="0.3"
+                    app:SpinKit_Color="@android:color/black" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_ConstraintLayout_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/shape_report_fragment"
+                android:padding="15dp">
+
+            <ImageButton
+                    android:id="@+id/profile_download_help"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_help" />
+
+            <TextView
+                    android:id="@+id/profile_download_title"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/profile_downloadTitle"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                    android:id="@+id/profile_download_highlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:background="@drawable/shape_eclipse_button"
+                    app:drawableEndCompat="@drawable/ic_highlight"
+                    android:padding="5dp"
+                    android:text="@string/profile_downloadHighlight"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_download_history"
+                    app:layout_constraintStart_toEndOf="@+id/profile_download_title"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_download_title" />
+
+            <Button
+                    android:id="@+id/profile_download_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:background="@drawable/shape_eclipse_button"
+                    app:drawableEndCompat="@drawable/ic_browse"
+                    android:padding="5dp"
+                    android:text="@string/profile_downloadHistory"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profile_download_highlight"
+                    app:layout_constraintTop_toTopOf="@+id/profile_download_highlight" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_ConstraintLayout_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/shape_report_fragment"
+                android:padding="15dp">
+
+            <Button
+                    android:id="@+id/profile_setting_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:background="@drawable/shape_eclipse_button"
+                    app:drawableEndCompat="@drawable/ic_report_setting_15"
+                    android:padding="5dp"
+                    android:text="@string/profile_settingReports"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_setting_memory"
+                    app:layout_constraintStart_toEndOf="@+id/profile_setting_title"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_setting_title" />
+
+            <Button
+                    android:id="@+id/profile_setting_memory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:background="@drawable/shape_eclipse_button"
+                    app:drawableEndCompat="@drawable/ic_memory"
+                    android:padding="5dp"
+                    android:text="@string/profile_settingMemory"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profile_setting_reports"
+                    app:layout_constraintTop_toTopOf="@+id/profile_setting_reports" />
+
+            <TextView
+                    android:id="@+id/profile_setting_title"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/reportInfo_Button_Setting"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile_ConstraintLayout_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/shape_report_fragment"
+                android:padding="15dp">
+
+            <Button
+                    android:id="@+id/profile_help_text"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_eclipse_button"
+                    android:padding="5dp"
+                    android:text="@string/profile_helpText"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:drawableEndCompat="@drawable/ic_help_text"
+                    app:layout_constraintEnd_toEndOf="@+id/profile_about_license"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/profile_about_license"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_about_license" />
+
+            <Button
+                    android:id="@+id/profile_about_license"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:background="@drawable/shape_eclipse_button"
+                    android:padding="5dp"
+                    android:text="@string/profile_aboutLicense"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:drawableEndCompat="@drawable/ic_legal"
+                    app:layout_constraintEnd_toEndOf="@+id/profile_about_share"
+                    app:layout_constraintStart_toStartOf="@+id/profile_about_version"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_about_title" />
+
+            <Button
+                    android:id="@+id/profile_about_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_eclipse_button"
+                    android:padding="5dp"
+                    android:text="@string/profile_aboutShare"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:drawableEndCompat="@drawable/ic_share_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profile_about_version"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_help_text" />
+
+            <Button
+                    android:id="@+id/profile_about_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/profile_downloadButtonHeight"
+                    android:background="@drawable/shape_eclipse_button"
+                    android:padding="5dp"
+                    android:text="@string/profile_aboutVersion"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/profile_downloadButtonTextSize"
+                    app:drawableEndCompat="@drawable/ic_version"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_about_share"
+                    app:layout_constraintStart_toEndOf="@+id/profile_about_dummy"
+                    app:layout_constraintTop_toTopOf="@+id/profile_about_share" />
+
+            <TextView
+                    android:id="@+id/profile_about_dummy"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/profile_about_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/profile_aboutTitle"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</ScrollView>

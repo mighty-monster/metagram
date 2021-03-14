@@ -1,0 +1,193 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sCoolGrayC3"
+    android:layoutDirection="ltr"
+    app:cardPreventCornerOverlap="false">
+
+
+    <LinearLayout
+        android:id="@+id/statisticsResult_rootLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/lTransparent"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_report_fragment">
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_deleteOrder"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginStart="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete_black" />
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_pauseButton"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginStart="14dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_deleteOrder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_report_setting" />
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_reportType"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_order_type_statistics" />
+
+            <ImageButton
+                android:id="@+id/statisticsProgress_playButton"
+                android:layout_width="@dimen/statisticsResult_imageButtonSize"
+                android:layout_height="@dimen/statisticsResult_imageButtonSize"
+                android:layout_marginStart="14dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_pauseButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_refresh_black" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/statisticsProgress_pic"
+                android:layout_width="@dimen/statisticsResult_profilePicSize"
+                android:layout_height="@dimen/statisticsResult_profilePicSize"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp"
+                android:padding="1dp"
+                app:civ_border_color="@color/sBlack"
+                app:civ_border_width="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsProgress_pauseButton" />
+
+
+            <TextView
+                android:id="@+id/statisticsProgress_RankTextView"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/statisticsResult_rankTextSize"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/statisticsResult_reportButton"
+                app:layout_constraintStart_toStartOf="@+id/statisticsResult_username"
+                app:layout_constraintTop_toTopOf="@+id/statisticsResult_reportButton" />
+
+            <TextView
+                android:id="@+id/statisticsResult_datetime"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/statisticsResult_datetimeTextSize"
+                app:layout_constraintBottom_toBottomOf="@+id/statisticsProgress_playButton"
+                app:layout_constraintEnd_toStartOf="@+id/statisticsProgress_reportType"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_playButton"
+                app:layout_constraintTop_toTopOf="@+id/statisticsProgress_playButton" />
+
+            <TextView
+                android:id="@+id/statisticsResult_engagement"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/statisticsResult_engagementTextViewHeight"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/statisticsResult_EngagementTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/statisticsResult_username"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsProgress_playButton" />
+
+            <ImageButton
+                android:id="@+id/statisticsResult_chartButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/statisticsResult_reportButtonsHeight"
+                android:layout_marginTop="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/statisticsResult_engagement"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/statisticsResult_reportButton"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsResult_engagement"
+                app:srcCompat="@drawable/ic_charts" />
+
+            <ImageButton
+                android:id="@+id/statisticsResult_reportButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/statisticsResult_reportButtonsHeight"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintEnd_toStartOf="@+id/statisticsResult_chartButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_RankTextView"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsResult_engagement"
+                app:srcCompat="@drawable/ic_reports" />
+
+            <TextView
+                android:id="@+id/profile_separator_1"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="#000"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/statisticsResult_chartButton"
+                app:layout_constraintEnd_toEndOf="@+id/statisticsResult_reportButton"
+                app:layout_constraintStart_toStartOf="@+id/statisticsResult_chartButton"
+                app:layout_constraintTop_toTopOf="@+id/statisticsResult_chartButton" />
+
+            <TextView
+                android:id="@+id/statisticsResult_username"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/sBlack"
+                android:textSize="@dimen/statisticsResult_datetimeTextSize"
+                android:gravity="left|center_vertical"
+                app:layout_constraintEnd_toStartOf="@+id/statisticsResult_engagement"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/statisticsProgress_playButton"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsProgress_playButton" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

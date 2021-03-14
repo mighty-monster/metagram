@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sCoolGrayC3">
+
+    <LinearLayout
+        android:id="@+id/LogActivity_titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sWhite"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/LogActivity_backButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/LogActivity_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/sBlack"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/LogActivity_LogScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:scrollbars="vertical|horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogActivity_autoScroll">
+
+
+        <TextView
+            android:id="@+id/LogActivity_LogTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sWhite"
+            android:layoutDirection="ltr"
+            android:padding="8dp"
+            android:textColor="@color/sBlack"
+            android:textSize="13dp" />
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/LogActivity_autoScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/sWhite"
+        android:layoutDirection="ltr"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Auto Scroll"
+        android:textColor="@color/sBlack"
+        app:layout_constraintEnd_toStartOf="@+id/LogActivity_advancedLogging"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogActivity_titleLayout" />
+
+
+    <CheckBox
+        android:id="@+id/LogActivity_advancedLogging"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/sWhite"
+        android:layoutDirection="ltr"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Advanced Logging"
+        android:textColor="@color/sBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LogActivity_autoScroll"
+        app:layout_constraintTop_toBottomOf="@+id/LogActivity_titleLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

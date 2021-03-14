@@ -1,0 +1,147 @@
+import com.android.build.OutputFile
+
+def applicationName = "Metagram"
+def applicationNumber = "10"
+def languageNumber = "2"
+def paymentNumber = "2"
+def sourceNumber = "90"
+def architecture = ""
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.android.gms.oss-licenses-plugin'
+
+android {
+
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "nava.metagram"
+        minSdkVersion 20
+        targetSdkVersion 30
+        versionCode sourceNumber.toInteger();
+        versionName "${applicationNumber}.${languageNumber}.${paymentNumber}.${sourceNumber}"
+
+        /*resConfigs "auto"*/
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), "proguard-rules.pro"
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    architecture = output.getFilter(OutputFile.ABI)
+                    output.outputFileName = "${applicationName} ${applicationNumber}-${languageNumber}-${paymentNumber}-${sourceNumber}-${architecture}.apk"
+
+                }
+
+            }
+            splits {
+                abi {
+                    enable true
+                    reset()
+                    include 'armeabi-v7a', 'x86'
+                    universalApk false
+                }
+            }
+
+        }
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), "proguard-rules.pro"
+
+        }
+
+    dexOptions {
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+        packagingOptions {
+            exclude 'META-INF/ASL2.0'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/MANIFEST.MF'
+        }
+        lintOptions {
+            quiet true                // false by default
+            checkReleaseBuilds false
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'androidx.work:work-runtime:2.4.0'
+
+    // Handle Application Crash
+    implementation 'cat.ereza:customactivityoncrash:2.2.0'
+
+    // Physics Layout
+    implementation 'com.github.Jawnnypoo:PhysicsLayout:2.1.0'
+
+    // Object To JSON
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // SpinKit for loading animation
+    implementation 'com.github.ybq:Android-SpinKit:1.1.0'
+
+    // Picasso for caching and lazy loading
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // Circle View Images
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    // Auto fit TextView
+    implementation 'me.grantland:autofittextview:0.2.1'
+
+    // Facebook Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
+    // MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    // Number Picker
+    implementation 'com.michaelmuenzer.android:ScrollableNumberPicker:0.2.2'
+
+    // Use Instagram API client in Picasso
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    // SQL Cipher
+    implementation 'net.zetetic:android-database-sqlcipher:4.2.0@aar'
+
+    // Nice Spinner
+    implementation 'com.github.arcadefire:nice-spinner:1.3.1'
+
+    // Showcase View
+    implementation 'com.github.mreram:showcaseview:1.1'
+
+    // Circular Progress Bar
+    implementation 'com.github.antonKozyriatskyi:CircularProgressIndicator:1.3.0'
+
+    // Circular Indicator
+    implementation 'me.relex:circleindicator:1.2.2'
+
+    // Touch Image View
+    implementation 'com.github.MikeOrtiz:TouchImageView:1.4.0'
+
+    // Including Open Source Notices
+    implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
+}

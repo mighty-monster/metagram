@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/fullname"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/AccountLayout_TextViewHeight"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:singleLine="true"
+        android:textSize="@dimen/profile_fullnameTextSize"
+        autofit:layout_constraintBottom_toBottomOf="@+id/profileImage"
+        autofit:layout_constraintEnd_toStartOf="@+id/actionButton"
+        autofit:layout_constraintStart_toEndOf="@+id/profileImage"
+        autofit:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <vp.metagram.ui.AccBrowser.AccImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profileImage"
+        android:layout_width="@dimen/AccountLayout_ImageSize"
+        android:layout_height="@dimen/AccountLayout_ImageSize"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="2dp"
+        android:padding="1dp"
+        app:civ_border_color="@color/sBlack"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/AccountLayout_TextViewHeight"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/profile_usernameTextSize"
+        autofit:layout_constraintEnd_toEndOf="@+id/fullname"
+        autofit:layout_constraintStart_toEndOf="@+id/profileImage"
+        autofit:layout_constraintTop_toTopOf="@+id/profileImage" />
+
+    <ImageButton
+        android:id="@+id/actionButton"
+        android:layout_width="@dimen/AccountLayout_IconSize"
+        android:layout_height="@dimen/AccountLayout_IconSize"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        autofit:layout_constraintBottom_toBottomOf="parent"
+        autofit:layout_constraintEnd_toEndOf="parent"
+        autofit:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

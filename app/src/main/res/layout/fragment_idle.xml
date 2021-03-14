@@ -1,0 +1,44 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sCoolGrayC3"
+    tools:context="vp.metagram.ui.MainFragments.IdleFragment">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sCoolGrayC3"
+            android:orientation="vertical">
+
+
+
+            <com.jawnnypoo.physicslayout.PhysicsFrameLayout
+                android:id="@+id/physics_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:background="@color/sCoolGrayC3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:bounds="true"
+                tools:boundsSize="50dp"
+                tools:gravityX="0.0"
+                tools:gravityY="4"
+                tools:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_constraintTop_toTopOf="parent">
+
+
+            </com.jawnnypoo.physicslayout.PhysicsFrameLayout>
+
+
+        </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

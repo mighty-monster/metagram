@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // Titles
+    <string name="training_title">Training</string>
+    <string name="errorHandling_title">Error Handling</string>
+    <string name="pleaseChoose_title">Please select one of the titles</string>
+    ////////////////////////////////////////////////////////////
+
+    // Learning Engagement
+    <string name="l_engagement_title"></string>
+    <string name="l_engagement_content"></string>
+    <string name="l_engagement_siteLink"></string>
+    <string name="l_engagement_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+    // Learning Ranking
+    <string name="l_ranking_title"></string>
+    <string name="l_ranking_content"></string>
+    <string name="l_ranking_siteLink"></string>
+    <string name="l_ranking_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+    // Learning Reports
+    <string name="l_reports_title"></string>
+    <string name="l_reports_content"></string>
+    <string name="l_reports_siteLink"></string>
+    <string name="l_reports_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+    // Learning Download/Share
+    <string name="l_downloadPosts_title"></string>
+    <string name="l_downloadPosts_content"></string>
+    <string name="l_downloadPosts_siteLink"></string>
+    <string name="l_downloadPosts_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+
+    // Learning renew account password
+    <string name="l_renewPassword_title"></string>
+    <string name="l_renewPassword_content"></string>
+    <string name="l_renewPassword_siteLink"></string>
+    <string name="l_renewPassword_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+    // add Statistics Order
+    <string name="l_addStatisticsOrder_title"></string>
+    <string name="l_addStatisticsOrder_content"></string>
+    <string name="l_addStatisticsOrder_siteLink"></string>
+    <string name="l_addStatisticsOrder_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+    // Buying Rubies
+    <string name="l_buyingRubies_title"></string>
+    <string name="l_buyingRubies_content_bazzar"></string>
+    <string name="l_buyingRubies_siteLink_bazzar"></string>
+    <string name="l_buyingRubies_videoLink_bazzar"></string>
+    ////////////////////////////////////////////////////////////
+
+
+    // Error Login
+    <string name="e_login_title"></string>
+    <string name="e_login_content"></string>
+    <string name="e_login_siteLink"></string>
+    <string name="e_login_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+    // Error Automatic Reports
+    <string name="e_automaticReport_title"></string>
+    <string name="e_automaticReport_content"></string>
+    <string name="e_automaticReport_siteLink"></string>
+    <string name="e_automaticReport_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+    // Learning report errors
+    <string name="e_reportErrors_title"></string>
+    <string name="e_reportErrors_content"></string>
+    <string name="e_reportErrors_siteLink"></string>
+    <string name="e_reportErrors_videoLink"></string>
+    ////////////////////////////////////////////////////////////
+
+
+
+
+
+
+    ////////////////////////////////////////////////////////////
+
+    // Interactive Help
+
+    // Registration
+    <string name="i_RegisterFragment_Help_title"></string>
+    <string name="i_RegisterFragment_content"></string>
+
+    // Profile
+    <string name="i_ProfileFragment_Help_title"></string>
+    <string name="i_ProfileFragment_Help_content"></string>
+
+    <string name="i_ProfileFragment_delete_title"></string>
+    <string name="i_ProfileFragment_delete_content"></string>
+
+    <string name="i_ProfileFragment_edit_title"></string>
+    <string name="i_ProfileFragment_edit_content"></string>
+
+    <string name="i_ProfileFragment_status_title"></string>
+    <string name="i_ProfileFragment_status_content"></string>
+
+
+    ////////////////////////////////////////////////////////////
+
+    // Process Fragment
+    <string name="i_ProcessFragment_Help_title"></string>
+    <string name="i_ProcessFragment_Help_content"></string>
+
+    <string name="i_ProcessFragment_percent_title"></string>
+    <string name="i_ProcessFragment_percent_content"></string>
+
+    <string name="i_ProcessFragment_time_title"></string>
+    <string name="i_ProcessFragment_time_content"></string>
+
+    <string name="i_ProcessFragment_log_title"></string>
+    <string name="i_ProcessFragment_log_content"></string>
+
+
+    ////////////////////////////////////////////////////////////
+
+    // Result Fragment
+    <string name="i_ResultFragment_Help_title"></string>
+    <string name="i_ResultFragment_Help_content"></string>
+
+    <string name="i_ResultFragment_rank_title"></string>
+    <string name="i_ResultFragment_rank_content"></string>
+
+    <string name="i_ResultFragment_engagement_title"></string>
+    <string name="i_ResultFragment_engagement_content"></string>
+
+    <string name="i_ResultFragment_report_title"></string>
+    <string name="i_ResultFragment_report_content"></string>
+
+    <string name="i_ResultFragment_chart_title"></string>
+    <string name="i_ResultFragment_chart_content"></string>
+
+    <string name="i_ResultFragment_setting_title"></string>
+    <string name="i_ResultFragment_setting_content"></string>
+
+    <string name="i_ResultFragment_refresh_title"></string>
+    <string name="i_ResultFragment_refresh_content"></string>
+
+
+    ////////////////////////////////////////////////////////////
+
+    // Reports Fragment
+    <string name="i_ReportFragment_Help_title"></string>
+    <string name="i_ReportFragment_Help_content"></string>
+
+    <string name="i_ReportFragment_filter_title"></string>
+    <string name="i_ReportFragment_filter_content"></string>
+
+
+    ////////////////////////////////////////////////////////////
+
+    // Accnt Browser
+    <string name="i_AccntBrowser_Post_title"></string>
+    <string name="i_AccntBrowser_Post_content"></string>
+
+    <string name="i_AccntBrowser_order_title"></string>
+    <string name="i_AccntBrowser_order_content"></string>
+
+    <string name="i_AccntBrowser_story_title"></string>
+    <string name="i_AccntBrowser_story_content"></string>
+
+
+    ////////////////////////////////////////////////////////////
+
+    // Add Order
+    <string name="i_AddOrder_Help_title"></string>
+    <string name="i_AddOrder_Help_content"></string>
+
+    <string name="i_AddOrder_ruby_title"></string>
+    <string name="i_AddOrder_ruby_content"></string>
+
+
+    ////////////////////////////////////////////////////////////
+
+    // Downloads in ProfileFragment
+    <string name="i_Downloads_title"></string>
+    <string name="i_Downloads_content"></string>
+
+    <string name="i_DownloadStory_title"></string>
+    <string name="i_DownloadStory_content"></string>
+
+    <string name="i_DownloadHistory_title"></string>
+    <string name="i_DownloadHistory_content"></string>
+
+</resources>

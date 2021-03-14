@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+
+    <vp.metagram.ui.AccBrowser.AccImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profileImage"
+        android:layout_width="@dimen/AccountReportLayout_ImageSize"
+        android:layout_height="@dimen/AccountReportLayout_ImageSize"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="2dp"
+        android:padding="1dp"
+        app:civ_border_color="@color/sBlack"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/AccountReportLayout_textSize"
+        autofit:layout_constraintBottom_toBottomOf="@+id/profileImage"
+        autofit:layout_constraintEnd_toStartOf="@+id/infoImageView"
+        autofit:layout_constraintStart_toEndOf="@+id/profileImage"
+        autofit:layout_constraintTop_toTopOf="@+id/profileImage" />
+
+    <ImageView
+        android:id="@+id/infoImageView"
+        android:layout_width="@dimen/AccountReportLayout_IconSize"
+        android:layout_height="@dimen/AccountReportLayout_IconSize"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="invisible"
+        autofit:layout_constraintEnd_toEndOf="parent"
+        autofit:layout_constraintTop_toTopOf="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/sBlack"
+        android:gravity="center"
+        autofit:layout_constraintBottom_toBottomOf="@+id/profileImage"
+        autofit:layout_constraintEnd_toEndOf="@+id/infoImageView"
+        autofit:layout_constraintStart_toStartOf="@+id/infoImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,138 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sCoolGrayC3"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:focusableInTouchMode="true"
+    app:cardPreventCornerOverlap="false">
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/robots_loading"
+        style="@style/SpinKitView.Small.Circle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="0.3"
+        android:visibility="gone"
+        app:SpinKit_Color="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/robots_searchViewLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/robots_pauseFilter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/robots_separator"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="#000"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/robots_searchViewLayout" />
+
+    <ImageButton
+        android:id="@+id/robots_playFilter"
+        android:layout_width="@dimen/ReportFragment_FilterSize"
+        android:layout_height="@dimen/ReportFragment_FilterSize"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/robots_dummyLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_play" />
+
+    <ImageButton
+        android:id="@+id/robots_pauseFilter"
+        android:layout_width="@dimen/ReportFragment_FilterSize"
+        android:layout_height="@dimen/ReportFragment_FilterSize"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/robots_dummyLayout"
+        app:layout_constraintStart_toEndOf="@+id/robots_playFilter"
+        app:layout_constraintTop_toTopOf="@+id/robots_dummyLayout"
+        app:srcCompat="@drawable/ic_pause" />
+
+    <LinearLayout
+        android:id="@+id/robots_dummyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/robots_addRobot"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/sWhite"
+        app:fabCustomSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="30dp"
+        app:srcCompat="@drawable/ic_add_robot" />
+
+    <LinearLayout
+        android:id="@+id/robots_searchViewLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/robots_dummyLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/robots_pauseFilter"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/robots_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/sWhite"
+            android:layoutDirection="rtl"
+            android:voiceSearchMode="showVoiceSearchButton|launchRecognizer" />
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/robots_scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/robots_dummyLayout">
+
+        <LinearLayout
+            android:id="@+id/robots_fragmentRootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

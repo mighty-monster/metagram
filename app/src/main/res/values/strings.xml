@@ -1,0 +1,328 @@
+<resources>
+    <string name="app_name_en">Metagram</string>
+
+    <string name="account_fragment_titlePart1" />
+    <string name="account_fragment_addAccount" />
+
+
+    <!--Login Activity-->
+    <string name="login_enterAccountPlease" />
+    <string name="login_connectingToInsta" />
+    <string name="login_problem" />
+    <string name="login_connectMessage" />
+    <string name="login_successMessage" />
+    <string name="login_loadingMessage" />
+
+    <!--Check Internet Dialog-->
+    <string name="error_cannotConnectToInstagram" />
+    <string name="error_noInternetMessage" />
+
+    <!--Button Titles-->
+    <string name="button_ok" />
+    <string name="button_Yes" />
+
+
+    <!--Metagram Agent-->
+    <string name="login_successful" />
+    <string name="login_duplicate" />
+
+    <!--General Menu-->
+    <string name="genMenu_settings" />
+    <string name="genMenu_help" />
+    <string name="genMenu_telegram" />
+    <string name="genMenu_share" />
+    <string name="genMenu_buy" />
+    <string name="genMenu_downloadStory" />
+
+    <!--Button Captions-->
+    <string name="button_confirmCaption" />
+    <string name="button_cancelCaption" />
+
+
+    <!--Account Menu Item-->
+    <string name="accountMenuItem_requests_title" translatable="false">Instagram Calls</string>
+    <string name="accountMenuItem_requests_total" translatable="false">Total:</string>
+    <string name="accountMenuItem_requests_daily" translatable="false">Today:</string>
+    <string name="accountMenuItem_requests_hourly" translatable="false">Last Hour:</string>
+    <string name="accountMenuItem_status_title" translatable="false">Status</string>
+
+    <!--Account Viewer-->
+    <string name="accountViewer_getPosts_title" />
+    <string name="accountViewer_getPosts_privateWarning" />
+    <string name="accountViewer_charts_title" />
+    <string name="accountViewer_reports_title" />
+    <string name="accountViewer_posts_title" />
+    <string name="accountViewer_addStatisticsMessage" />
+    <string name="accountViewer_purchaseStatistics" />
+
+
+    <!--Edit Account-->
+    <string name="editAccount_message"/>
+    <!--About US Activity-->
+    <string name="aboutUsActivity_title" />
+    <string name="aboutUsActivity_content" />
+
+    <!--Setting Activity-->
+    <string name="settingActivity_title" />
+    <string name="settingActivity_notificationDescription" />
+    <string name="settingActivity_delayTitle" />
+    <string name="settingActivity_delayDescription" />
+    <string name="settingActivity_loggingTitle" />
+    <string name="settingActivity_loggingDescription" />
+    <string name="settingActivity_defaultSetting" />
+    <string name="settingActivity_wakeLockDescription" />
+    <string name="settingActivity_sendErrors" />
+
+    <!--Memory Activity-->
+    <string name="memoryActivity_shrink" />
+    <string name="memoryActivity_clear" />
+    <string name="memoryActivity_title" />
+    <string name="memoryActivity_mainDatabaseBanner" />
+    <string name="memoryActivity_mainDatabase" />
+    <string name="memoryActivity_logDatabaseBanner" />
+    <string name="memoryActivity_logDatabase" />
+    <string name="memoryActivity_downloadDirBanner" />
+    <string name="memoryActivity_downloadDir" />
+    <string name="memoryActivity_cacheDirBanner" />
+    <string name="memoryActivity_cacheDir" />
+    <string name="memoryActivity_clearingWarningTitle" />
+    <string name="memoryActivity_downloadDirWarning" />
+    <string name="memoryActivity_cacheDirWarning" />
+
+    <!--Finding Telegram-->
+    <string name="error_findingTelegramTitle" />
+    <string name="error_findingTelegram" />
+
+    <!--No Network-->
+    <string name="error_noNetworkTitle" />
+    <string name="error_noNetwork" />
+
+    <!--Log In Errors-->
+    <string name="login_noNetwork" />
+    <string name="login_noServer" />
+    <string name="login_unknownError" />
+
+    <!--Send Error Dialog-->
+    <string name="sendError_title" />
+    <string name="sendError_deviceID" />
+    <string name="sendError_deviceID_notRegistered" />
+    <string name="sendError_errorDescription" />
+    <string name="sendError_sendToServer" />
+    <string name="sendError_sendToTelegram" />
+    <string name="sendError_permissionErrorTitle" />
+    <string name="sendError_permissionErrorDescription" />
+
+    <!--Main Activity Menu-->
+    <string name="mainMenu_profile" />
+    <string name="mainMenu_others" />
+    <string name="mainMenu_robots" />
+    <string name="mainMenu_backButton" />
+    <string name="mainMenu_APIUpgradeMessage" />
+
+    <!--Profile Fragment-->
+    <string name="profile_followersTitle" />
+    <string name="profile_followingsTitle" />
+    <string name="profile_postsTitle" />
+    <string name="profile_noOfReports" />
+    <string name="profile_noOfRequests" />
+    <string name="profile_noOfOthers" />
+    <string name="profile_downloadTitle" />
+    <string name="profile_downloadHighlight" />
+    <string name="profile_downloadHistory" />
+    <string name="profile_rubiesTitle" />
+    <string name="profile_settingReports" />
+    <string name="profile_settingMemory" />
+    <string name="profile_settingLogging" />
+    <string name="profile_helpVideo" />
+    <string name="profile_helpText" />
+    <string name="profile_aboutTitle" />
+    <string name="profile_aboutPrivacy" />
+    <string name="profile_aboutLicense" />
+    <string name="profile_aboutShare" />
+    <string name="profile_aboutTelegram" />
+    <string name="profile_aboutInstagram" />
+    <string name="profile_aboutVersion" />
+
+    <!--Statistics Result Fragment-->
+    <string name="statisticsResult_Engagement" />
+
+
+    <!--Statistics Executor-->
+    <string name="statisticsExecutor_waitingInQeue" />
+    <string name="statisticsExecutor_notEnoughRubies" />
+    <string name="statisticsExecutor_fetchingAccountInfo" />
+    <string name="statisticsExecutor_collectingFollowers" />
+    <string name="statisticsExecutor_collectingFollowings" />
+    <string name="statisticsExecutor_collectingPostsList" />
+    <string name="statisticsExecutor_collectingPostsDetails" />
+    <string name="statisticsExecutor_finalizing" />
+    <string name="statisticsExecutor_seconds" />
+    <string name="statisticsExecutor_minutes" />
+    <string name="statisticsExecutor_hours" />
+    <string name="statisticsExecutor_rateLimit" />
+
+    <!--Statistics Progress Fragment-->
+    <string name="statisticsProgress_Estimation" />
+
+    <!--Add Order Fragment-->
+    <string name="addOrder_fParameterTitle" />
+    <string name="addOrder_pParameterTitle" />
+    <string name="addOrder_dParameterTitle" />
+    <string name="addOrder_rParameterTitle" />
+    <string name="addOrder_intervalDays" />
+    <string name="addOrder_predictedTime" />
+    <string name="addOrder_OrderPrice" />
+    <string name="addOrder_SuccessMessage" />
+    <string name="addOrder_UpdateMessage" />
+    <string name="addOrder_Warning"/>
+    <string name="addOrder_WarningTitle" />
+    <string name="addOrder_WarningGoOn" />
+    <string name="addOrder_PrivateMessage" />
+    <string name="addOrder_UpgradeMessage" />
+    <string name="addOrder_UpgradeDialog" />
+    <string name="addOrder_SearchAccount" />
+
+
+    <!--Statistics Remove Dialog-->
+    <string name="removeStatistics_title" />
+    <string name="removeStatistics_content" />
+
+    <!--Statistics Cancel Dialog-->
+    <string name="cancelStatistics_title" />
+    <string name="cancelStatistics_content" />
+
+    <!--Remove Account-->
+    <string name="removeAccount_title" />
+    <string name="removeAccount_content" />
+
+    <!--Account Browser Activity-->
+    <string name="accntBrowser_followersTitle" />
+    <string name="accntBrowser_followingsTitle" />
+    <string name="accntBrowser_postsTitle" />
+    <string name="accntBrowser_privateMessage" />
+    <string name="accntBrowser_downloadTitle" />
+    <string name="accntBrowser_downloadMessage" />
+    <string name="accntBrowser_startDownloading" />
+    <string name="mediaViewer_error" />
+    <string name="storyDownloader_storyTitle" />
+    <string name="storyDownloader_downloadHighlightError" />
+    <string name="accntBrowser_refreshingInfo" />
+
+
+    <!--Report Type Class-->
+    <string name="reportType_notFollowedBack" />
+    <string name="reportType_notFollowingBack" />
+    <string name="reportType_mostLikedPosts" />
+    <string name="reportType_mostCommentedPosts" />
+    <string name="reportType_mostViewedPosts" />
+    <string name="reportType_peopleMostLiked" />
+    <string name="reportType_peopleMostCommented" />
+    <string name="reportType_peopleMostEngaged" />
+    <string name="reportType_lazyFollowers" />
+    <string name="reportType_likedButDidNotFollow" />
+    <string name="reportType_commentedButDidNotFollow" />
+    <string name="reportType_unfollowedYou" />
+    <string name="reportType_removedLikes" />
+    <string name="reportType_removedComments" />
+    <string name="reportType_someonesComments" />
+    <string name="reportType_someonesLikes" />
+    <string name="reportType_youunfollowed" />
+
+
+
+    <!--Report Viewer Activity-->
+    <string name="reportViewer_validationMessage" />
+    <string name="reportViewer_getCount" />
+
+    <!--Query Steps Title-->
+    <string name="queryStep_p2p" />
+    <string name="queryStep_daily" />
+    <string name="queryStep_hourly" />
+    <string name="queryStep_weekly" />
+    <string name="queryStep_monthly" />
+
+    <!--Charts Title-->
+    <string name="chartTitle_engagementInTime" />
+    <string name="chartTitle_totalLikesInTime" />
+    <string name="chartTitle_totalCommentsInTime" />
+    <string name="chartTitle_totalViewsInTime" />
+    <string name="chartTitle_addedLikes" />
+    <string name="chartTitle_addedComments" />
+    <string name="chartTitle_addedViews" />
+    <string name="chartTitle_changeOfFollowers" />
+    <string name="chartTitle_changeOfFollowings" />
+
+    <!--Chart Types-->
+    <string name="chartType_barChart" />
+    <string name="chartType_lineChart" />
+
+    <!--Share Post-->
+    <string name="sharePost_title" />
+
+    <!--Save Post-->
+    <string name="savePort_permissionTitle" />
+    <string name="savePort_permissionMessage" />
+
+    <!--Share App-->
+    <string name="shareApp_title" />
+    <string name="shareApp_content" />
+    <string name="shareApp_choose" />
+
+    <!--Copy To Clipboard-->
+    <string name="copyToClipboard_telegramID" />
+    <string name="copyToClipboard_caption" />
+    <string name="copyToClipboard_comment" />
+
+    <!--Disabled Chart-->
+    <string name="disabledChart_message" />
+
+    <!--Disabled Report-->
+    <string name="disabledReport_message" />
+    <string name="disabledReport_button" />
+
+    <!--Information Dialog-->
+    <string name="informationDialog_Title" />
+
+    <!--Report List Activity-->
+    <string name="reportList_Title" />
+    <string name="reportList_R_Parameter_Description" />
+
+    <!--Report Info-->
+    <string name="reportInfo_Description" />
+    <string name="reportInfo_Button_Setting" />
+    <string name="reportInfo_Button_Log" />
+    <string name="reportInfo_noRuby" />
+    <string name="reportInfo_notAutorized" />
+    <string name="reportInfo_rateLimit" />
+
+
+    <!--Connection Info-->
+    <string name="connectionInfo_healthy" />
+    <string name="connectionInfo_noOfRequest" />
+    <string name="connectionInfo_requestAverageTime" />
+    <string name="connectionInfo_databaseSize" />
+    <string name="connectionInfo_downloadedAccounts" />
+    <string name="connectionInfo_noInternetContent" />
+    <string name="connectionInfo_loginRequired" />
+    <string name="connectionInfo_loginRequiredButton" />
+
+    <!--Download History-->
+    <string name="DownloadHistory_Title" />
+    <string name="DownloadItem_Title" />
+    <string name="DownloadItem_DeleteTitle" />
+    <string name="DownloadItem_DeleteAccount" />
+    <string name="DownloadItem_DeletePost" />
+
+    <!--Version Dialog-->
+    <string name="VersionDialog_UUID" />
+    <string name="VersionDialog_Version" />
+    <string name="VersionDialog_Language" />
+    <string name="VersionDialog_payment" />
+    <string name="VersionDialog_Clipboard" />
+
+    <!--Legal Activity-->
+    <string name="LegalActivity_Licences" />
+    <string name="LegalActivity_Terms" />
+    <string name="LegalActivity_Privacy" />
+
+</resources>
