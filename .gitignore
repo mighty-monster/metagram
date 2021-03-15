@@ -95,5 +95,4 @@ lint/tmp/
 /captures
 .externalNativeBuild
 /.idea
-/gradle
 # To be safe
