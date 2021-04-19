@@ -53,7 +53,7 @@ public class PostMedia implements IGWADigest
 
         if (No > 0)
         {
-            sqlText = String.format(Locale.ENGLISH," Update Posts Set Status = %d, MiniLink = '%s', MID = '%s', URLs = '%s' Where MPK = %d", updatedStatus,miniLink, ID,prepareStringForSQL(URLsJson), MPK);
+            sqlText = String.format(Locale.ENGLISH," Update Posts Set Status = %d, MiniLink = '%s', MID = '%s', URLs = '%s', PicURL = '%s' Where MPK = %d", updatedStatus,miniLink, ID,prepareStringForSQL(URLsJson), prepareStringForSQL(picURL), MPK);
 
             dbMetagram.execQuery(sqlText);
         }

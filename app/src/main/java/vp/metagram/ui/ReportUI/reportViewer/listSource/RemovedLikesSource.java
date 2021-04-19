@@ -21,7 +21,7 @@ public class RemovedLikesSource extends ReportListSource
 
     String searchValue;
 
-    String QueryFromPart = "Select MPK, MiniLink, MID, PostType, URLs, Caption, Others.Username, Others.PictureURL, Others.IPK from Rel_Like LEFT JOIN Posts  \n" +
+    String QueryFromPart = "Select MPK, MiniLink, MID, PostType, URLs, Posts.PicURL, Caption, Others.Username, Others.PictureURL, Others.IPK from Rel_Like LEFT JOIN Posts  \n" +
             "\tOn Rel_Like.FMPK = Posts.MPK Left Join Others\n" +
             "\t\tOn Rel_Like.LikerIPK = Others.IPK \n" +
             "    Where Posts.FIPK = %d and Posts.StatJobID = %d and Rel_Like.StatJobID < %d and Username like '%%%s%%'";
@@ -94,6 +94,7 @@ public class RemovedLikesSource extends ReportListSource
                     reportUser.username = result.getString(result.getColumnIndex("Username"));
                     reportUser.accountPicUrl = result.getString(result.getColumnIndex("PictureURL"));
                     reportUser.caption = result.getString(result.getColumnIndex("Caption"));
+                    reportUser.PicURL = result.getString(result.getColumnIndex("PicURL"));
                     newList.add(reportUser);
                     result.moveToNext();
                 }

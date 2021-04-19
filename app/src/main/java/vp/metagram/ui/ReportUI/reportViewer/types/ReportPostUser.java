@@ -14,4 +14,5 @@ public class ReportPostUser
     public long accountIPK;
     public String caption;
     public String comment;
+    public String PicURL;
 }

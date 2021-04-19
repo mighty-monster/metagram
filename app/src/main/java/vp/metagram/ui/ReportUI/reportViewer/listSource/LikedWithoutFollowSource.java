@@ -21,7 +21,7 @@ public class LikedWithoutFollowSource extends ReportListSource
 
     int lastID = -1;
 
-    String QueryFromPart = " Select Distinct Others.IPK,Others.Username,Others.PictureURL,Posts.MPK,Posts.PostType, Posts.Caption,Posts.MID, Posts.MiniLink, Posts.URLs   From Rel_Like Left Join Others\n" +
+    String QueryFromPart = " Select Distinct Others.IPK,Others.Username,Others.PictureURL,Posts.MPK,Posts.PostType, Posts.Caption,Posts.MID, Posts.MiniLink, Posts.URLs, Posts.PicURL  From Rel_Like Left Join Others\n" +
                             "  On LikerIPK = Others.IPK Left Join Posts On Posts.MPK = Rel_Like.FMPK  Where FMPK in ( %s ) " +
                             " and Others.IPK not in ( Select FollowerIPK from Rel_Follower Where FIPK = %d)\n" +
                             "    AND Username like '%%%s%%' and Others.IPK <> FIPK";
@@ -104,6 +104,7 @@ public class LikedWithoutFollowSource extends ReportListSource
                     reportUser.username = result.getString(result.getColumnIndex("Username"));
                     reportUser.accountPicUrl = result.getString(result.getColumnIndex("PictureURL"));
                     reportUser.caption = result.getString(result.getColumnIndex("Caption"));
+                    reportUser.PicURL = result.getString(result.getColumnIndex("PicURL"));
                     newList.add(reportUser);
                     result.moveToNext();
                 }

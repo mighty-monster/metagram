@@ -89,7 +89,7 @@ public class ReportPostsAdapter extends RecyclerView.Adapter<ReportPostsAdapter.
     {
 
         ReportMedia listItem = itemsList.get(position);
-        String postImageLink = getInstagramImageLink_Medium(listItem.miniLink);
+        String postImageLink = listItem.PicURL;
 
         if (decideUsingAPICookies(metagramAgent,isPrivate,IPK))
         {

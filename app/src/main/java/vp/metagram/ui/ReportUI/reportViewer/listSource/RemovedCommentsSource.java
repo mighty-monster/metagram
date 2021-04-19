@@ -20,7 +20,7 @@ public class RemovedCommentsSource extends ReportListSource
 
     String searchValue;
 
-    String QueryFromPart = "Select MPK, MiniLink, MID, PostType, URLs, Caption, Others.Username, Others.PictureURL, Others.IPK, CommentText from Rel_Comment LEFT JOIN Posts\n" +
+    String QueryFromPart = "Select MPK, MiniLink, MID, PostType, URLs, Posts.PicURL, Caption, Others.Username, Others.PictureURL, Others.IPK, CommentText from Rel_Comment LEFT JOIN Posts\n" +
             "\tOn Rel_Comment.FMPK = Posts.MPK Left Join Others\n" +
             "\t\tOn Rel_Comment.CommenterIPK = Others.IPK \n" +
             "    Where Posts.FIPK = %d and Posts.StatJobID = %d and Rel_Comment.StatJobID < %d and Username like '%%%s%%'";
@@ -94,6 +94,7 @@ public class RemovedCommentsSource extends ReportListSource
                     reportUser.accountPicUrl = result.getString(result.getColumnIndex("PictureURL"));
                     reportUser.comment = result.getString(result.getColumnIndex("CommentText"));
                     reportUser.caption = result.getString(result.getColumnIndex("Caption"));
+                    reportUser.PicURL = result.getString(result.getColumnIndex("PicURL"));
                     newList.add(reportUser);
                     result.moveToNext();
                 }

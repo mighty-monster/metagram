@@ -22,7 +22,7 @@ public class CommentedWithoutFollowSource extends ReportListSource
     int lastID = -1;
 
 
-    String QueryFromPart = " Select Others.IPK,Others.Username,Others.PictureURL,Posts.MPK,Posts.PostType, Posts.Caption,Posts.MID, Posts.MiniLink, Posts.URLs, CommentText  From Rel_Comment Left Join Others\n" +
+    String QueryFromPart = " Select Others.IPK,Others.Username,Others.PictureURL,Posts.MPK,Posts.PostType, Posts.Caption,Posts.MID, Posts.MiniLink, Posts.URLs, Posts.PicURL, CommentText  From Rel_Comment Left Join Others\n" +
                         "  On CommenterIPK = Others.IPK  Left Join Posts On Posts.MPK = Rel_Comment.FMPK Where FMPK in ( %s ) " +
                         " and Others.IPK not in ( Select FollowerIPK from Rel_Follower Where FIPK = %d)\n" +
                         "    AND Username like '%%%s%%' and Others.IPK <> FIPK";
@@ -105,6 +105,7 @@ public class CommentedWithoutFollowSource extends ReportListSource
                     reportUser.accountPicUrl = result.getString(result.getColumnIndex("PictureURL"));
                     reportUser.caption = result.getString(result.getColumnIndex("Caption"));
                     reportUser.comment = result.getString(result.getColumnIndex("CommentText"));
+                    reportUser.PicURL = result.getString(result.getColumnIndex("PicURL"));
                     newList.add(reportUser);
                     result.moveToNext();
                 }

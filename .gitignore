@@ -87,6 +87,7 @@ lint/tmp/
 # To be safe
 *.iml
 .gradle
+app/release/
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
